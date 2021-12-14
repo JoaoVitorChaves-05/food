@@ -1,0 +1,113 @@
+[
+    {
+        "Name": "Hamburguer",
+        "Foods": [
+            {
+                "Name": "Hamburguer 1",
+                "Weight": "300g",
+                "Price": 14.99
+            },
+            {
+                "Name": "Hamburguer 2",
+                "Weight": "350g",
+                "Price": 16.99
+            },
+            {
+                "Name": "Hamburguer 3",
+                "Weight": "380g",
+                "Price": 17.99
+            },
+            {
+                "Name": "Hamburguer 4",
+                "Weight": "400g",
+                "Price": 19.99
+            }
+        ],
+        "Bebidas": [
+            {
+                "Name": "Coca-cola",
+                "Quantity": "200ml",
+                "Price": 7.99
+            },
+            {
+                "Name": "Guraná",
+                "Quantity": "200ml",
+                "Price": 7.99
+            }
+        ]
+    },
+    {
+        "Name": "Comidas",
+        "Foods": [
+            {
+                "Name": "Comida 1",
+                "Weight": "300g",
+                "Price": 14.99
+            },
+            {
+                "Name": "Comida 2",
+                "Weight": "350g",
+                "Price": 16.99
+            },
+            {
+                "Name": "Comida 3",
+                "Weight": "380g",
+                "Price": 17.99
+            },
+            {
+                "Name": "Comida 4",
+                "Weight": "400g",
+                "Price": 19.99
+            }
+        ],
+        "Bebidas": [
+            {
+                "Name": "Coca-cola",
+                "Quantity": "200ml",
+                "Price": 7.99
+            },
+            {
+                "Name": "Guraná",
+                "Quantity": "200ml",
+                "Price": 7.99
+            }
+        ]
+    },
+    {
+        "Name": "Vegetariano",
+        "Foods": [
+            {
+                "Name": "Comida 1",
+                "Weight": "300g",
+                "Price": 14.99
+            },
+            {
+                "Name": "Comida 2",
+                "Weight": "350g",
+                "Price": 16.99
+            },
+            {
+                "Name": "Comida 3",
+                "Weight": "380g",
+                "Price": 17.99
+            },
+            {
+                "Name": "Comida 4",
+                "Weight": "400g",
+                "Price": 19.99
+            }
+        ],
+        "Bebidas": [
+            {
+                "Name": "Coca-cola",
+                "Quantity": "200ml",
+                "Price": 7.99
+            },
+            {
+                "Name": "Guraná",
+                "Quantity": "200ml",
+                "Price": 7.99
+            }
+        ]
+    }
+]

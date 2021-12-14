@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="/styles/pedido.css" type="text/css">
+<main>
+    <div class="pedido">
+        <div class="info-main">
+            <h1>{{produtoSelecionado.nome_produto}}</h1>
+            <img src="/images/hamburguer-de-queijo.png" alt="Foto do pedido" width="150px" height="150px">
+            <div class="info-food">
+                <p>{{produtoSelecionado.descricao}}</p>
+                {{#if temPromocao}}
+                    <h2 class="principal-price">{{produtoSelecionado.promocao_valor}}</h2>
+                    {{else}}
+                    <h2 class="principal-price">{{produtoSelecionado.vl_venda}}</h2>
+                {{/if}}
+                </div>
+        </div>
+        <form name="options" action="http://192.168.15.21:3000/cardapio/submit" method="post">
+            <div class="content">
+                {{#each gruposComplementos}}
+                    <div class="group required group-options">
+                        <div class="title-group">
+                            <h2>{{this.grupo_complemento}}</h2>
+                            {{#if this.MinimoComplemento}}
+                                <h3 class="maxOptions">Obrigatório (Máximo de opções: {{this.MaximoComplemento}})</h3>
+                                {{else}}
+                                <h3 class="maxOptions">Opcional (Máximo de opções: {{this.MaximoComplemento}})</h3>
+                            {{/if}}
+                        </div>
+                        <div class="options">
+                            {{#each this.opcoes}}
+                                {{#if this.valor}}
+                                    <div class="option option-without-price">
+                                        <p class="text-option">{{this.complemento}}</p>
+                                        <p class="price">R$ {{this.valor}}</p>
+                                        <input type="checkbox" value="1" name="option 1" onclick="verificar(this)">
+                                    </div>
+                                    {{else}}
+                                    <div class="option option-without-price">
+                                        <p class="text-option">{{this.complemento}}</p>
+                                        <input type="checkbox" value="0" name="option 1" onclick="verificar(this)">
+                                    </div>
+                                {{/if}}
+                                
+                            {{/each}}
+                        </div>
+                    </div>
+                {{/each}}
+                <div id="group-textarea" class="group">
+                    <div class="title-group">
+                        <h2>Informação adicional</h2>
+                    </div>
+                    <textarea name="text" rows="4" cols="20" placeholder="Insira aqui alguma informação de preparo"></textarea>
+                </div>
+                <div class="group group-price">
+                    <div class="subTotal">
+                        <h2>Subtotal:</h2>
+                        {{#if temPromocao}}
+                            <h2 id="subTotal">{{produtoSelecionado.promocao_valor}}</h2>
+                        {{else}}
+                            <h2 id="subTotal">{{produtoSelecionado.vl_venda}}</h2>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+</main>
+<footer>
+    <div id="back-button">
+        <h2>Voltar</h2>
+    </div>
+    <div id="qtd-input">
+        <img id="less-button" src="/images/less.png" alt="Botão de diminuir a quantidade">
+        <h2 id="quantity">1</h2>
+        <img id="plus-button" src="/images/mais.png" alt="Botão de aumentar a quantidade">
+    </div>
+    <div id="add-to-buy">
+        <h2>Adicionar</h2>
+    </div>
+</footer>
+<script src="/scripts/controllOptions.js"></script>
+<script src="/scripts/renderPrices.js"></script>

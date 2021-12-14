@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/restaurant.css">
+</head>
+<body>
+    <nav>
+        <div class="logo-restaurant">
+            <img width="100px" height="100px"src="/images/hamburguer-de-queijo.png" alt="Logo do restaurante">
+            <h1>Hamburguer</h1>
+        </div>
+    </nav>
+    <main>
+        <div class="menu">
+            <div class="group">
+                <h1>Lanches</h1>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="img-item">
+                            <img width="100px" height="100px"src="/images/hamburguer-de-queijo.png" alt="Logo do restaurante">
+                        </div>
+                        <div class="info-item">
+                            <h2>Lanche 1</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates debitis praesentium dolor neque hic corporis delectus, deserunt incidunt asperiores doloremque nam nulla eum quas ex voluptas cupiditate quia dolore vel!</p>
+                        </div>
+                        <div class="price-item">
+                            <h3>14,99</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <h1>Bebidas</h1>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="img-item">
+                            <img width="100px" height="100px"src="/images/hamburguer-de-queijo.png" alt="Logo do restaurante">
+                        </div>
+                        <div class="info-item">
+                            <h2>Lanche 1</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates debitis praesentium dolor neque hic corporis delectus, deserunt incidunt asperiores doloremque nam nulla eum quas ex voluptas cupiditate quia dolore vel!</p>
+                        </div>
+                        <div class="price-item">
+                            <h3>14,99</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <h1>Sobremesa</h1>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="img-item">
+                            <img width="100px" height="100px"src="/images/hamburguer-de-queijo.png" alt="Logo do restaurante">
+                        </div>
+                        <div class="info-item">
+                            <h2>Lanche 1</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates debitis praesentium dolor neque hic corporis delectus, deserunt incidunt asperiores doloremque nam nulla eum quas ex voluptas cupiditate quia dolore vel!</p>
+                        </div>
+                        <div class="price-item">
+                            <h3>14,99</h3>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="img-item">
+                            <img width="100px" height="100px"src="/images/hamburguer-de-queijo.png" alt="Logo do restaurante">
+                        </div>
+                        <div class="info-item">
+                            <h2>Lanche 1</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates debitis praesentium dolor neque hic corporis delectus, deserunt incidunt asperiores doloremque nam nulla eum quas ex voluptas cupiditate quia dolore vel!</p>
+                        </div>
+                        <div class="price-item">
+                            <h3>14,99</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carrinho">
+            <img width="50px" height="50px" src="/images/carrinho.png" alt="carrinho">
+        </div>
+        <div class="modal active">
+            <div class="popup">
+                <div class="title-popup">
+                    <h1>Hamburguer</h1>
+                </div>
+                <div class="items-area">
+                    
+                </div>
+                <div class="type-area">
+                    <div class="deliveryButton active-button">
+                        <h4>Delivery</h4>
+                    </div>
+                    <div class="getFood">
+                        <h4>Retirar</h4>
+                    </div>
+                </div>
+                <form action="/delivery" method="post">
+                    <input placeholder="Insira seu nome" type="text" name="name" id="name">
+                    <input placeholder="Insira seu telefone (com DDD)" type="tel" name="Celular" id="Celular">
+                    <div class="cep-numberHouse">
+                        <input placeholder="CEP" type="number" name="cep" id="cep">
+                        <input placeholder="Número do endereço" type="number" name="numberHouse" id="numberHouse">
+                    </div>
+                    <input placeholder="Endereço" type="text" name="address" id="address">
+                    <div class="neighbor-reference">
+                        <input placeholder="Bairro" type="text" name="neighbor" id="neighbor">
+                        <input placeholder="Referência" type="text" name="reference" id="reference">
+                    </div>
+                    <div class="city-state">
+                        <input placeholder="Cidade" type="text" name="city" id="city">
+                        <input placeholder="Estado" type="text" name="state" id="state">    
+                    </div>
+                    <select name="payment" id="payment">
+                        <optgroup>
+                            <option value="null">Forma de pagamento</option>
+                            <option value="dinheiro">Dinheiro</option>
+                            <option value="credito-mastercard">Credito Mastercard</option>
+                            <option value="credito-visa">Credito Visa</option>
+                            <option value="debito-mastercard">Débito Mastercard</option>
+                            <option value="debito-visa">Débito Visa</option>
+                        </optgroup>
+                    </select>
+                </form>
+                <div class="confirm-area">
+                    <div class="back-to-menu">
+                        <h3>Voltar para o cardápio</h3>
+                    </div>
+                    <div class="confirm-button">
+                        <h3>Confirmar</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="back-button">
+            <h2>Voltar</h2>
+        </div>
+    </footer>
+    <script src="/scripts/linkFood.js" defer></script>
+    <script src="/scripts/renderItems.js" defer></script>
+</body>
+</html>

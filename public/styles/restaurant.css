@@ -1,0 +1,367 @@
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-bottom: 1.5%;
+}
+
+
+.logo-restaurant {
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 1px 1.5px 1.5px 1.5px rgb(153, 153, 153);
+
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 10px;
+
+    padding: 10px;
+}
+
+.logo-restaurant h1 {
+    font-size: 1.2em;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.menu {
+    max-width: 500px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-self: center;
+
+    margin: 1.5% auto;
+
+}
+
+.group {
+    margin-bottom: 1%;
+}
+
+.menu-items {
+    margin-top: 1%;
+}
+
+.menu-item{
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+
+    box-shadow: 1px 1px 1px 1px rgb(129, 129, 129);
+
+    border-radius: 10px;
+
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+
+.menu-info {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    box-shadow: 1px 1px 1px 1px rgb(129, 129, 129);
+    border-radius: 10px;
+
+    margin-bottom: 10px
+}
+
+.menu-info .info-item p {
+    text-align: center;
+}
+
+.menu-item h3 {
+    text-align: center;
+}
+
+.img-item, .price-item {
+    flex: 1
+}
+
+.info-item {
+    flex: 3;
+    padding-left: 10px;
+}
+
+.info-item p {
+    font-size: smaller;
+}
+
+.price-item {
+    align-self: flex-start;
+}
+
+.back-button {
+    background-color: rgb(255, 218, 97);
+    width: 200px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.863);
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 2;
+
+    top: 0;
+}
+
+html body .popup {
+    position: relative;
+    max-width: 600px;
+
+    background-color: white;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: black;
+
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+
+    border-radius: 10px;
+
+    overflow-y: scroll !important;
+    height: 100vh;
+
+    z-index: 3;
+}
+
+.popup p {
+    color: rgb(177, 177, 177);
+}
+
+.item-to-buy {
+    border-bottom: 1px solid black;
+}
+
+.item-to-buy h2 {
+    padding: 10px;
+}
+
+.info-to-buy {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    text-align: center;
+
+    border-top: 1px solid black;
+}
+
+.info-to-buy p {
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 10px;
+}
+
+.info-to-buy h3 {
+    border-left: 1px solid black;
+    padding: 10px;
+}
+
+.confirm-area {
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 10px;
+}
+
+.confirm-button {
+    background-color: rgb(26, 153, 0);
+    width: 180px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    padding: 20px;
+
+    color: rgb(255, 255, 255);
+}
+
+.back-to-menu {
+    background-color: rgb(252, 55, 48);
+    width: 180px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    padding: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.confirm-area h3, .back-to-menu h3 {
+    margin-top: auto;
+}
+
+form {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+form input, select {
+    margin-top: 10px;
+    padding: 10px;
+
+    border-radius: 10px;
+    border: 1px solid green;
+    color: green;
+}
+
+form input:focus {
+    background-color: rgb(150, 221, 109);
+    color: green;
+    border: 1px solid green;
+
+    outline: none;
+}
+
+form select:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: green;
+}
+
+.carrinho {
+    position: fixed;
+    right: 25px;
+    bottom: 20px;
+
+    background-color: rgb(113, 255, 57);
+    border: 2px solid green;
+
+    border-radius: 50%;
+    padding: 10px;
+
+    cursor: pointer;
+}
+
+.carrinho img {
+    position: relative;
+    top: 3px;
+}
+
+html {
+    overflow-y: hidden;
+}
+
+.cep-numberHouse, .neighbor-reference, .city-state {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.cep-numberHouse input, .neighbor-reference input, .city-state input {
+    width: 49.5%;
+}
+
+.type-area  {
+    display: flex;
+    flex-direction: row;
+}
+
+.deliveryButton, .getFood {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(152, 255, 120);
+
+    padding: 10px;
+    border-radius: 10px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    cursor: pointer;
+
+    color: rgb(123, 255, 82);
+}
+
+.type-area .active-button {
+    color: white;
+    background-color: green;
+    border: 2px solid green;
+}
+
+.items-area {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    margin-bottom: 5px;
+}
+
+.areaTotal {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    text-align: center;
+
+    border-top: 1px solid black;
+}
+
+.totalPrice {
+    border-left: 1px solid black;
+    padding: 10px;
+}
+
+.not-found {
+    padding: 20px;
+    border-bottom: 1px solid black;
+
+    text-align: center;
+}
+
+.delete-button {
+    width: 30px;
+    height: 30px;
+
+    float: right;
+    cursor: pointer;
+}
+
+.group-info {
+    max-width: 500px;
+    margin: 0 auto;
+}

@@ -1,0 +1,18 @@
+[
+    {
+        "NomeRestaurante":"HOPFIELDS COM.ALIMENTOS/BEBIDAS LTDA-ME",
+        "RestauranteAberto": "true",
+        "RestauranteApelido": "Bar",
+        "Endereco": "RUA ELISA COSTA SANTOS, 200 - JD.SAO DIMAS - SAO JOSE DOS CAMPOS - SP",
+        "Telefone": "12-3921-3766",
+        "Foto": "/imagens/"
+    },
+    {
+        "NomeRestaurante": "PASTELARIA MASSA FRITA",
+        "RestauranteAberto": "true",
+        "RestauranteApelido": "Pastel",
+        "Endereco": "RUA SAO JOAO DEL REY, 280 - BOSQUE DOS EUCALIPTOS - Sao Jose dos Campos - SP",
+        "Telefone": "39363130",
+        "Foto": "/imagens/"
+    }
+]

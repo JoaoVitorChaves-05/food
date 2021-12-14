@@ -1,0 +1,144 @@
+<link rel="stylesheet" href="/styles/restaurant.css">
+<nav>
+    <div class="logo-restaurant">
+        <img width="100px" height="100px"src="/images/hamburguer-de-queijo.png" alt="Logo do restaurante">
+        <h1 id="title">{{restaurante}}</h1>
+        <h2 style="font-size: medium;">Restaurante está: <span id="state">{{state}}</span></h2>
+    </div>
+</nav>
+<main>
+    <div class="group-info">
+        <div class="menu-info">
+            <div class="info-item">
+                <p style="font-size: 1.0rem">
+                    {{descricao}}
+                </p>
+            </div>
+            {{#if mensagemDestaque}}
+                <div style="margin-top: 10px;" class="info-item">
+                    <p>
+                        Aviso: <br>{{mensagemDestaque}}
+                    </p>
+                </div>
+            {{/if}}
+            <div style="margin-top: 10px;" class="info-item">
+                <p>
+                    Dica: <br>
+                    Para fazer o seu pedido é fácil! Basta clicar no produto,
+                    adicionar no carrinho e depois clicar no botão verde para
+                    confirmar o pedido.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="menu">
+        {{#each grupos}}
+        <div class="group">
+            {{#if this.produtos_em_promocao}}
+                <h1>{{this.grupo}}</h1>
+                <div class="menu-items">
+                    {{#each this.produtos_em_promocao}}
+                        <div class="menu-item">
+                            <div class="img-item">
+                                <img width="100px" height="100px" src="/images/hamburguer-de-queijo.png" alt="Logo do restaurante">
+                            </div>
+                            <div class="info-item">
+                                <h2>{{this.nome_produto}}</h2>
+                                <p>{{this.descricao}}</p>
+                            </div>
+                            <div class="price-item">
+                                <h3>{{this.promocao_valor}}</h3>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+                {{else}}
+                <h1>{{this.grupo}}</h1>
+                <div class="menu-items">
+                    {{#each this.produtos}}
+                        <div class="menu-item">
+                            <div class="img-item">
+                                <img width="100px" height="100px" src="/images/hamburguer-de-queijo.png" alt="Logo do restaurante">
+                            </div>
+                            <div class="info-item">
+                                <h2>{{this.nome_produto}}</h2>
+                                <p>{{this.descricao}}</p>
+                            </div>
+                            <div class="price-item">
+                                <h3>{{this.vl_venda}}</h3>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            {{/if}}
+            
+        </div>
+        {{/each}}
+        <div style="display: none" id="tel">
+        {{telefone}}
+        </div>
+    </div>
+    <div class="group-info">
+        <div class="menu-info">
+            <div class="info-item">
+                <p>Telefone: {{telefone}}</p>
+            </div>
+            <div class="info-item">
+                <p>{{endereco}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="carrinho">
+        <img width="50px" height="50px" src="/images/carrinho.png" alt="carrinho">
+    </div>
+    <div id="modal-carrinho" class="modal active">
+        <div class="popup">
+            <div class="items-area">
+                
+            </div>
+            <div class="type-area">
+                {{#if podeDelivery}}
+                    <div class="deliveryButton">
+                        <h4>Delivery</h4>
+                    </div>
+                {{/if}}
+                {{#if podeRetirar}}
+                    <div class="getFood">
+                        <h4>Retirar</h4>
+                    </div>
+                {{/if}}
+            </div>
+            <form name="userInfo" action="/delivery" method="post">
+
+            </form>
+            <div class="confirm-area">
+                <div class="back-to-menu">
+                    <h3>Voltar pra o cardápio</h3>
+                </div>
+                <div class="confirm-button">
+                    <h3>Confirmar</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="back-button">
+        <h2>Voltar</h2>
+    </div>
+</footer>
+<script src="/scripts/linkFood.js" defer></script>
+<script src="/scripts/renderItems.js" defer></script>
+<script src="/scripts/controllForm.js" defer></script>
+<script src="/scripts/pageVisibility.js"></script>
+<script>
+    const productPrice = document.querySelectorAll('.price-item > h3')
+    console.log(productPrice)
+    productPrice.forEach(price => {
+        let value = price.innerHTML
+        value = parseFloat(value)
+        value = value.toFixed(2)
+        value = value.replace('.', ',')
+        price.innerHTML = 'R$ ' + value
+    })
+</script>

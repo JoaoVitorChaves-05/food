@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido</title>
+    <link rel="stylesheet" href="/styles/main.css" type="text/css">
+    <link rel="stylesheet" href="/styles/pedido.css" type="text/css">
+</head>
+<body>
+    <main>
+        <div class="pedido">
+            <div class="info-main">
+                <h1>Comida</h1>
+                <img src="/images/hamburguer-de-queijo.png" alt="Foto do pedido" width="150px" height="150px">
+                <div class="info-food">
+                    <p>Pão de australiano, hamburguer de costela, queijo prato, rúcula, cebola roxa e molho especial.</p>
+                    <h2 class="principal-price">14,99</h2>
+                </div>
+            </div>
+            <form name="options" action="http://localhost:3000/cardapio/submit" method="post">
+                <div class="content">
+                    <div class="group required group-options">
+                        <div class="title-group">
+                            <h2>Campo 1</h2>
+                            <h3 class="maxOptions">Obrigátório (Máximo de opções: 3).</h3>
+                        </div>
+                        <div class="options">
+                            <div class="option option-without-price">
+                                <p>Opção 1</p>
+                                <input type="checkbox" value="0" name="option 1" onclick="verificar(this)">
+                            </div>
+                            <div class="option option-without-price">
+                                <p>Opção 2</p>
+                                <input type="checkbox" value="0" name="option 2" onclick="verificar(this)">
+                            </div>
+                            <div class="option option-without-price">
+                                <p>Opção 3</p>
+                                <input type="checkbox" value="0" name="option 3" onclick="verificar(this)">
+                            </div>
+                            <div class="option option-without-price">
+                                <p>Opção 4</p>
+                                <input type="checkbox" value="0" name="option 4" onclick="verificar(this)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group required group-options">
+                        <div class="title-group">
+                            <h2>Campo 2</h2>
+                            <h3 class="maxOptions">Obrigátório (Máximo de opções: 1).</h3>
+                        </div>
+                        <div class="options">
+                            <div class="option option-with-price">
+                                <p class="text-option">Opção 1</p>
+                                <p>R$</p><p class="price">1,50</p>
+                                <input type="checkbox" value="1.50" name="option 1" onclick="verificar(this)">
+                            </div>
+                            <div class="option option-with-price">
+                                <p class="text-option">Opção 2</p>
+                                <p>R$</p><p class="price">1,50</p>
+                                <input type="checkbox" value="1.50" name="option 2" onclick="verificar(this)">
+                            </div>
+                            <div class="option option-with-price">
+                                <p class="text-option">Opção 3</p>
+                                <p>R$</p><p class="price">1,50</p>
+                                <input type="checkbox" value="1.50" name="option 3" onclick="verificar(this)">
+                            </div>
+                            <div class="option option-with-price">
+                                <p class="text-option">Opção 4</p>
+                                <p>R$</p><p class="price">1,50</p>
+                                <input type="checkbox" value="1.50" name="option 4" onclick="verificar(this)">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="group-textarea" class="group">
+                        <div class="title-group">
+                            <h2>Campo 3</h2>
+                        </div>
+                        <textarea name="text" rows="4" cols="20" placeholder="Insira aqui alguma informação de preparo"></textarea>
+                    </div>
+                    <div class="group group-price">
+                        <div class="subTotal">
+                            <h2>Subtotal:</h2>
+                            <h2 id="subTotal">14,99</h2>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div id="back-button">
+            <h2>Voltar</h2>
+        </div>
+        <div id="qtd-input">
+            <img id="less-button" src="/images/less.png" alt="Botão de diminuir a quantidade">
+            <h2 id="quantity">1</h2>
+            <img id="plus-button" src="/images/mais.png" alt="Botão de aumentar a quantidade">
+        </div>
+        <div id="add-to-buy">
+            <h2>Adicionar</h2>
+        </div>
+    </footer>
+    <script src="/scripts/controllOptions.js"></script>
+</body>
+</html>

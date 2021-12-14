@@ -1,0 +1,3279 @@
+[
+  {
+    "cod_produto": 3,
+    "nome_produto": " DOCE LEITE C MORANGO GRANDE",
+    "unidade": "UN",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 17.5,
+    "codigo_pesquisa": "301",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20484,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20485,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20486,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20487,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20488,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20489,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20490,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20491,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20492,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20493,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20494,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20495,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20496,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20497,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  },
+  {
+    "cod_produto": 5,
+    "nome_produto": "CHOCOLATE C MORANGO GRANDE",
+    "unidade": "UN",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 17.5,
+    "codigo_pesquisa": "302",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20498,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20499,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20500,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20501,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20502,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20503,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20504,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20505,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20506,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20507,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20508,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20509,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20510,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20511,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  },
+  {
+    "cod_produto": 113,
+    "nome_produto": "BANANA LEITE COND MEDIO",
+    "unidade": "UN",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 14.5,
+    "codigo_pesquisa": "303",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20512,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20513,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20514,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20515,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20516,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20517,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20518,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20519,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20520,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20521,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20522,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20523,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20524,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20525,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  },
+  {
+    "cod_produto": 114,
+    "nome_produto": "BANANA LEITE COND GRANDE",
+    "unidade": "UN",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 17.5,
+    "codigo_pesquisa": "304",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20526,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20527,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20528,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20529,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20530,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20531,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20532,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20533,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20534,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20535,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20536,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20537,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20538,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20539,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  },
+  {
+    "cod_produto": 115,
+    "nome_produto": "BANANA DOCE LEITE MEDIO",
+    "unidade": "UN",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 14.5,
+    "codigo_pesquisa": "305",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20540,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20541,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20542,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20543,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20544,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20545,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20546,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20547,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20548,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20549,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20550,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20551,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20552,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20553,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  },
+  {
+    "cod_produto": 116,
+    "nome_produto": "BANANA DOCE LEITE GRANDE",
+    "unidade": "UN",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 17.5,
+    "codigo_pesquisa": "306",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20554,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20555,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20556,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20557,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20558,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20559,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20560,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20561,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20562,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20563,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20564,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20565,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20566,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20567,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  },
+  {
+    "cod_produto": 117,
+    "nome_produto": "BANANA CHOCOLATE MEDIO",
+    "unidade": "UN",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 14.5,
+    "codigo_pesquisa": "307",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20568,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20569,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20570,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20571,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20572,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20573,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20574,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20575,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20576,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20577,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20578,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20579,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20580,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20581,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  },
+  {
+    "cod_produto": 118,
+    "nome_produto": "BANANA CHOCOLATE GRANDE",
+    "unidade": "UN",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 17.5,
+    "codigo_pesquisa": "308",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20582,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20583,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20584,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20585,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20586,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20587,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20588,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20589,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20590,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20591,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20592,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20593,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20594,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20595,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  },
+  {
+    "cod_produto": 119,
+    "nome_produto": "BANANA CANELA MEDIO",
+    "unidade": "UN",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 14.5,
+    "codigo_pesquisa": "309",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20596,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20597,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20598,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20599,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20600,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20601,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20602,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20603,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20604,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20605,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20606,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20607,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20608,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20609,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  },
+  {
+    "cod_produto": 120,
+    "nome_produto": "BANANA CANELA GRANDE",
+    "unidade": "UN",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 17.5,
+    "codigo_pesquisa": "3010",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20610,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20611,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20612,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20613,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20614,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20615,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20616,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20617,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20618,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20619,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20620,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20621,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20622,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20623,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  },
+  {
+    "cod_produto": 121,
+    "nome_produto": "BOMBOM SONHO VALSA MEDIO",
+    "unidade": "UN",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 14.5,
+    "codigo_pesquisa": "3011",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20624,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20625,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20626,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20627,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20628,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20629,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20630,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20631,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20632,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20633,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20634,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20635,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20636,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20637,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  },
+  {
+    "cod_produto": 122,
+    "nome_produto": "BOMBOM SONHO VALSA GRANDE",
+    "unidade": "UN",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 17.5,
+    "codigo_pesquisa": "3012",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20638,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20639,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20640,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20641,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20642,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20643,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20644,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20645,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20646,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20647,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20648,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20649,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20650,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20651,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  },
+  {
+    "cod_produto": 123,
+    "nome_produto": "CHOCOLATE MEDIO",
+    "unidade": "UN",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 14.5,
+    "codigo_pesquisa": "3013",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20652,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20653,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20654,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20655,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20656,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20657,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20658,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20659,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20660,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20661,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20662,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20663,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20664,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20665,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  },
+  {
+    "cod_produto": 124,
+    "nome_produto": "CHOCOLATE GRANDE",
+    "unidade": "UN",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 17.5,
+    "codigo_pesquisa": "3014",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20666,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20667,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20668,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20669,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20670,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20671,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20672,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20673,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20674,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20675,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20676,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20677,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20678,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20679,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  },
+  {
+    "cod_produto": 125,
+    "nome_produto": "CHOCOLATE MORANGO MEDIO",
+    "unidade": "UN",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 14.5,
+    "codigo_pesquisa": "3015",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20680,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20681,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20682,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20683,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20684,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20685,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20686,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20687,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20688,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20689,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20690,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20691,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20692,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20693,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  },
+  {
+    "cod_produto": 126,
+    "nome_produto": "CHOCOLATE MORANGO GRANDE",
+    "unidade": "UN",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 17.5,
+    "codigo_pesquisa": "3016",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20694,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20695,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20696,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20697,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20698,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20699,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20700,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20701,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20702,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20703,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20704,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20705,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20706,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20707,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  },
+  {
+    "cod_produto": 127,
+    "nome_produto": "DOCE LEITE MORANGO MEDIO",
+    "unidade": "UN",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 14.5,
+    "codigo_pesquisa": "3017",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20708,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20709,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20710,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20711,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20712,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20713,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20714,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20715,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20716,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20717,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20718,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20719,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20720,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20721,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  },
+  {
+    "cod_produto": 128,
+    "nome_produto": "DOCE LEITE MORANGO GRANDE",
+    "unidade": "UN",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 17.5,
+    "codigo_pesquisa": "3018",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20722,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20723,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20724,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20725,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20726,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20727,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20728,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20729,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20730,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20731,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20732,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20733,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20734,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20735,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  },
+  {
+    "cod_produto": 129,
+    "nome_produto": "DOCE LEITE PA�OCA MEDIO",
+    "unidade": "UN",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 14.5,
+    "codigo_pesquisa": "3019",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20736,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20737,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20738,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20739,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20740,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20741,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20742,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20743,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20744,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20745,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20746,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20747,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20748,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20749,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  },
+  {
+    "cod_produto": 130,
+    "nome_produto": "DOCE LEITE PA�OCA GRANDE",
+    "unidade": "UN",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 17.5,
+    "codigo_pesquisa": "3020",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20750,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20751,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20752,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20753,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20754,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20755,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20756,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20757,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20758,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20759,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20760,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20761,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20762,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20763,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  },
+  {
+    "cod_produto": 131,
+    "nome_produto": "BRANCO C MORANGO MEDIO",
+    "unidade": "UN",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 14.5,
+    "codigo_pesquisa": "3021",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20764,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20765,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20766,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20767,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20768,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20769,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20770,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20771,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20772,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20773,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20774,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20775,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20776,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20777,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  },
+  {
+    "cod_produto": 132,
+    "nome_produto": "BRANCO C MORANGO GRANDE",
+    "unidade": "UN",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 17.5,
+    "codigo_pesquisa": "3022",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20778,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20779,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20780,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20781,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20782,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20783,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20784,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20785,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20786,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20787,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20788,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20789,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20790,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20791,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  },
+  {
+    "cod_produto": 133,
+    "nome_produto": "ROMEU JULIETA MEDIO",
+    "unidade": "UN",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 14.5,
+    "codigo_pesquisa": "3023",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20792,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20793,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20794,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20795,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20796,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20797,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20798,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20799,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20800,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20801,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20802,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20803,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20804,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20805,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  },
+  {
+    "cod_produto": 134,
+    "nome_produto": "ROMEU JULIETA GRANDE",
+    "unidade": "UN",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 17.5,
+    "codigo_pesquisa": "3024",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20806,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20807,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20808,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20809,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20810,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20811,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20812,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20813,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20814,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20815,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20816,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20817,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20818,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20819,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  },
+  {
+    "cod_produto": 135,
+    "nome_produto": "NUTELLA MEDIO",
+    "unidade": "UN",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 16.8,
+    "codigo_pesquisa": "3025",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20820,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20821,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20822,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20823,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20824,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20825,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20826,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20827,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20828,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20829,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20830,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20831,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20832,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20833,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  },
+  {
+    "cod_produto": 136,
+    "nome_produto": "NUTELLA GRANDE",
+    "unidade": "UN",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 19.8,
+    "codigo_pesquisa": "3026",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20834,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20835,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20836,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20837,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20838,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20839,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20840,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20841,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20842,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20843,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20844,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20845,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20846,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20847,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  },
+  {
+    "cod_produto": 216,
+    "nome_produto": "RAFAELLO MEDIO",
+    "unidade": "UN",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 16.8,
+    "codigo_pesquisa": "3027",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20848,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20849,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20850,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20851,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20852,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20853,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20854,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20855,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20856,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20857,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20858,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20859,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20860,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20861,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  },
+  {
+    "cod_produto": 217,
+    "nome_produto": "RAFAELLO GRANDE",
+    "unidade": "UN",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 19.8,
+    "codigo_pesquisa": "3028",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20862,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20863,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20864,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20865,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20866,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20867,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20868,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20869,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20870,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20871,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20872,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20873,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20874,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20875,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  },
+  {
+    "cod_produto": 222,
+    "nome_produto": "STRUDEL DE MA�A GRANDE",
+    "unidade": "",
+    "cod_grupo": 3,
+    "nome_grupo": "PASTEL DOCE",
+    "vl_venda": 23.8,
+    "codigo_pesquisa": "3029",
+    "promocao": "N",
+    "promocao_valor": 0.0,
+    "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+    "tipo_pizza": "N",
+    "adicionais": [
+      {
+        "cod_complemento": 20876,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE CHOCOLATE",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20877,
+        "cod_grupo_complemento": 1,
+        "grupo_complemento": "Massa",
+        "complemento": "MASSA DE MORANGO",
+        "valor": 6.0
+      },
+      {
+        "cod_complemento": 20878,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BANANA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20879,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE CONDENSADO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20880,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "DOCE LEITE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20881,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOCOLATE",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20882,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CHOC BRANCO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20883,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "BOMBOM",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20884,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "MORANGO",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20885,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "PA�OCA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20886,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "LEITE EM P�",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20887,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "GOIABADA",
+        "valor": 3.9
+      },
+      {
+        "cod_complemento": 20888,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "NUTELLA",
+        "valor": 5.0
+      },
+      {
+        "cod_complemento": 20889,
+        "cod_grupo_complemento": 2,
+        "grupo_complemento": "Recheio",
+        "complemento": "CANELA",
+        "valor": 1.3
+      }
+    ]
+  }
+]

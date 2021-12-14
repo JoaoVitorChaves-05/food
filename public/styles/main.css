@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    background-color: rgb(253, 255, 246);
+
+    z-index: 1;
+}
+
+#nav {
+    display: flex;
+    flex-direction: row;
+    padding: 2% auto;
+    justify-content: space-between;
+    width: 100%;
+    position: sticky;
+}
+
+#logo-items {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.5%;
+    flex: 1
+}
+
+#logo {
+    max-width:80px;
+    max-height:80px;
+    width: auto;
+    height: auto;
+
+    margin-left: 5%;
+}
+
+.logo-title {
+    display: flex;
+    flex-direction: row;
+    margin: auto 0;
+    font-size: 64px;
+    margin-left: 5px;
+}
+
+#text-item-1 {
+    color: green;
+    font-weight: 100;
+}
+
+#text-item-2 {
+    color: rgb(206, 0, 0);
+    font-weight: bold;
+}
+
+#list-items {
+    flex: 1;
+}
+
+#items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+}
+
+.item {
+    margin-left: 15px;
+    margin-right: 15px;
+
+    padding: 5px;
+    font-size: 24px;
+    
+    font-weight: 100;
+    color: rgb(156, 156, 156);
+}
+
+.item:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.active {
+    color: red;
+}
+/*
+
+*/
+@media screen and (max-width: 768px) {
+    #nav {
+        display: flex;
+        flex-direction: column;
+        padding: 3% auto;
+        flex-wrap: wrap;
+        font-size: 12px;
+    }
+
+    #logo-items {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .item {
+        font-size: 20px;
+    }
+
+    #list-items {
+        width: 100%;
+    }
+
+    #title-restaurants h1 {
+        font-size: 24px;
+    }
+}

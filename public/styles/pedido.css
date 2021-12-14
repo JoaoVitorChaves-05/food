@@ -1,0 +1,207 @@
+main {
+    padding-bottom: 100px;
+}
+
+.pedido {
+    background-color: #fff;
+    border: 1px solid black;
+
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+
+    margin: 25px auto;
+
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px 1px rgb(82, 82, 82);
+}
+
+.info-main {
+    text-align: center;
+    width: 100%;    
+}
+
+.info-food p {
+    text-align: left;
+}
+
+.info-food {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    justify-content: space-between;
+}
+
+.content {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+#group-textarea {
+    padding-bottom: 0px;
+    background-color: rgb(255, 149, 78);
+}
+
+#group-textarea textarea {
+    padding-top: 10px;
+    
+}
+
+.group {
+    padding-bottom: 10px;
+    border: 2px solid rgb(180, 94, 73);
+    border-radius: 10px;
+
+    margin-bottom: 5px;
+
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title-group {
+    background-color: rgb(255, 149, 78);
+    text-align: center;
+
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.title-group h2 {
+    color: #fff;
+}
+
+.title-group h3 {
+    background-color: rgb(255, 172, 117);
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.option {
+    display: flex;
+    flex-direction: row;
+}
+
+.option-without-price {
+    width: 80%;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+    border-bottom: 1px solid black;
+}
+
+.option-with-price {
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.price {
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.text-option {
+    width: 42%;
+}
+
+.option input {
+    margin-top: 3.5px;
+}
+
+textarea {
+    resize: none;
+    padding: 10px;
+
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+
+    width: 100%;
+    padding-bottom: 0;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+
+    background-color: rgb(204, 204, 204);
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+
+    width: 100%;
+
+    height: 50px;
+}
+
+footer div {
+    margin: 5px;
+}
+
+#back-button {
+    background-color: rgb(247, 247, 144);
+    padding: 5px;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+#add-to-buy {
+    background-color: rgb(247, 247, 144);
+    padding: 5px;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+#qtd-input {
+    width: 110px;
+    height: 40px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#qtd-input img {
+    width: 30px;
+    height: 30px;
+
+    cursor: pointer;
+}
+
+#qtd-input img, #qtd-input h2 {
+    margin: 4px;
+}
+
+@media screen and (max-width: 320px) {
+    #qtd-input {
+        width: 90px;
+    }
+
+    #qtd-input img {
+        width: 20px;
+        height: 20px;
+    }
+
+    #back-button, #add-to-buy {
+        font-size: 12px;
+    }
+}

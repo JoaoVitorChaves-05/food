@@ -1,0 +1,387 @@
+[
+    {
+        "NomeRestaurante": "HOPFILEDS COM.ALIMENTOS/BEBIDAS LTDA-ME",
+        "RestauranteAberto": true,
+        "Endereco": "RUA ELISA COSTA SANTOS, 200 - JD.SAO DIMAS - SAO JOSE DOS CAMPOS - SP",
+        "Telefone": "12-3921-3766",
+        "Foto": "/imagens/",
+        "Descricao": "Seja bem-vindo a melhor hamburgeria da cidade! Aqui temos as melhores opções para nossos clientes!",
+        "MensagemDestaque": "O nosso lanche mais vendido é o Hop Burguer!",
+        "PodeDelivery": true,
+        "PodeRetirar": true,
+        "grupos": [
+            {
+                "grupo": "Promoção",
+                "produtos_em_promocao": [
+                    {
+                        "cod_produto": 1,
+                        "nome_produto": "OTHER BURGUER",
+                        "descricao": "Bla bla bla bla bla",
+                        "unidade": "UN",
+                        "cod_grupo": 1,
+                        "nome_grupo": "Burguers",
+                        "vl_venda": 28.00,
+                        "codigo_pesquisa": "1.1",
+                        "promocao": "S",
+                        "promocao_valor": 22.00,
+                        "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+                        "tipo_pizza": "N",
+                        "gruposComplemento": [
+                            {
+                                "grupo_complemento": "Pão",
+                                "opcoes": [
+                                    {
+                                        "cod_complemento": 1.0,
+                                        "cod_grupo_complemento": 1,
+                                        "complemento": "Pão liso",
+                                        "valor": 0.00
+                                    },
+                                    {
+                                        "cod_complemento": 1.1,
+                                        "cod_grupo_complemento": 1,
+                                        "complemento": "Pão de gergelim",
+                                        "valor": 0.00
+                                    },
+                                    {
+                                        "cod_complemento": 1.2,
+                                        "cod_grupo_complemento": 1,
+                                        "grupo_complemento": "Pão",
+                                        "complemento": "Pão australiano",
+                                        "valor": 0.00
+                                    }
+                                ],
+                                "temValor": false,
+                                "MinimoComplemento": 1,
+                                "MaximoComplemento": 1
+                            },
+                            {
+                                "grupo_complemento": "Carne",
+                                "opcoes": [
+                                    {
+                                        "cod_complemento": 2.0,
+                                        "cod_grupo_complemento": 2,
+                                        "complemento": "Mal passada",
+                                        "valor": 0.00
+                                    },
+                                    {
+                                        "cod_complemento": 2.0,
+                                        "cod_grupo_complemento": 2,
+                                        "complemento": "No ponto",
+                                        "valor": 0.00
+                                    },
+                                    {
+                                        "cod_complemento": 2.0,
+                                        "cod_grupo_complemento": 2,
+                                        "complemento": "Bem passada",
+                                        "valor": 0.00
+                                    }
+                                ],
+                                "temValor": false,
+                                "MinimoComplemento": 1,
+                                "MaximoComplemento": 1
+                            },
+                            {
+                                "grupo_complemento": "Adicionais",
+                                "opcoes": [
+                                    {
+                                        "cod_complemento": 3.0,
+                                        "cod_grupo_complemento": 3,
+                                        "complemento": "Bacon",
+                                        "valor": 1.50
+                                    },
+                                    {
+                                        "cod_complemento": 3.1,
+                                        "cod_grupo_complemento": 3,
+                                        "complemento": "Cheddar",
+                                        "valor": 1.50
+                                    },
+                                    {
+                                        "cod_complemento": 3.2,
+                                        "cod_grupo_complemento": 3,
+                                        "complemento": "Hamburguer adicional",
+                                        "valor": 2.00
+                                    }
+                                ],
+                                "temValor": true,
+                                "MinimoComplemento": 0,
+                                "MaximoComplemento": 3
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "grupo": "Hamburguer",
+                "produtos": [
+                    {
+                        "cod_produto": 1,
+                        "nome_produto": "HOP BURGUER",
+                        "descricao": "Bla bla bla bla bla",
+                        "unidade": "UN",
+                        "cod_grupo": 1,
+                        "nome_grupo": "Burguers",
+                        "vl_venda": 28.00,
+                        "codigo_pesquisa": "1.1",
+                        "promocao": "N",
+                        "promocao_valor": 0.00,
+                        "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+                        "tipo_pizza": "N",
+                        "gruposComplemento": [
+                            {
+                                "grupo_complemento": "Pão",
+                                "opcoes": [
+                                    {
+                                        "cod_complemento": 1.0,
+                                        "cod_grupo_complemento": 1,
+                                        "complemento": "Pão liso",
+                                        "valor": 0.00
+                                    },
+                                    {
+                                        "cod_complemento": 1.1,
+                                        "cod_grupo_complemento": 1,
+                                        "complemento": "Pão de gergelim",
+                                        "valor": 0.00
+                                    },
+                                    {
+                                        "cod_complemento": 1.2,
+                                        "cod_grupo_complemento": 1,
+                                        "grupo_complemento": "Pão",
+                                        "complemento": "Pão australiano",
+                                        "valor": 0.00
+                                    }
+                                ],
+                                "temValor": false,
+                                "MinimoComplemento": 1,
+                                "MaximoComplemento": 1
+                            },
+                            {
+                                "grupo_complemento": "Carne",
+                                "opcoes": [
+                                    {
+                                        "cod_complemento": 2.0,
+                                        "cod_grupo_complemento": 2,
+                                        "complemento": "Mal passada",
+                                        "valor": 0.00
+                                    },
+                                    {
+                                        "cod_complemento": 2.0,
+                                        "cod_grupo_complemento": 2,
+                                        "complemento": "No ponto",
+                                        "valor": 0.00
+                                    },
+                                    {
+                                        "cod_complemento": 2.0,
+                                        "cod_grupo_complemento": 2,
+                                        "complemento": "Bem passada",
+                                        "valor": 0.00
+                                    }
+                                ],
+                                "temValor": false,
+                                "MinimoComplemento": 1,
+                                "MaximoComplemento": 1
+                            },
+                            {
+                                "grupo_complemento": "Adicionais",
+                                "opcoes": [
+                                    {
+                                        "cod_complemento": 3.0,
+                                        "cod_grupo_complemento": 3,
+                                        "complemento": "Bacon",
+                                        "valor": 1.50
+                                    },
+                                    {
+                                        "cod_complemento": 3.1,
+                                        "cod_grupo_complemento": 3,
+                                        "complemento": "Cheddar",
+                                        "valor": 1.50
+                                    },
+                                    {
+                                        "cod_complemento": 3.2,
+                                        "cod_grupo_complemento": 3,
+                                        "complemento": "Hamburguer adicional",
+                                        "valor": 2.00
+                                    }
+                                ],
+                                "temValor": false,
+                                "MinimoComplemento": 0,
+                                "MaximoComplemento": 3
+                            }
+                        ]
+                    },
+                    {
+                        "cod_produto": 2,
+                        "nome_produto": "UAI SO BURGUER",
+                        "descricao": "Bla bla bla bla bla",
+                        "unidade": "UN",
+                        "cod_grupo": 1,
+                        "nome_grupo": "Burguers",
+                        "vl_venda": 28.00,
+                        "codigo_pesquisa": "1.1",
+                        "promocao": "N",
+                        "promocao_valor": 0.00,
+                        "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+                        "tipo_pizza": "N",
+                        "gruposComplemento": [
+                            {
+                                "grupo_complemento": "Pão",
+                                "opcoes": [
+                                    {
+                                        "cod_complemento": 1.0,
+                                        "cod_grupo_complemento": 1,
+                                        "complemento": "Pão liso",
+                                        "valor": 0.00
+                                    },
+                                    {
+                                        "cod_complemento": 1.1,
+                                        "cod_grupo_complemento": 1,
+                                        "complemento": "Pão de gergelim",
+                                        "valor": 0.00
+                                    },
+                                    {
+                                        "cod_complemento": 1.2,
+                                        "cod_grupo_complemento": 1,
+                                        "grupo_complemento": "Pão",
+                                        "complemento": "Pão australiano",
+                                        "valor": 0.00
+                                    }
+                                ],
+                                "temValor": false,
+                                "MinimoComplemento": 1,
+                                "MaximoComplemento": 1
+                            },
+                            {
+                                "grupo_complemento": "Carne",
+                                "opcoes": [
+                                    {
+                                        "cod_complemento": 2.0,
+                                        "cod_grupo_complemento": 2,
+                                        "complemento": "Mal passada",
+                                        "valor": 0.00
+                                    },
+                                    {
+                                        "cod_complemento": 2.0,
+                                        "cod_grupo_complemento": 2,
+                                        "complemento": "No ponto",
+                                        "valor": 0.00
+                                    },
+                                    {
+                                        "cod_complemento": 2.0,
+                                        "cod_grupo_complemento": 2,
+                                        "complemento": "Bem passada",
+                                        "valor": 0.00
+                                    }
+                                ],
+                                "temValor": false,
+                                "MinimoComplemento": 1,
+                                "MaximoComplemento": 1
+                            },
+                            {
+                                "grupo_complemento": "Adicionais",
+                                "opcoes": [
+                                    {
+                                        "cod_complemento": 3.0,
+                                        "cod_grupo_complemento": 3,
+                                        "complemento": "Bacon",
+                                        "valor": 1.50
+                                    },
+                                    {
+                                        "cod_complemento": 3.1,
+                                        "cod_grupo_complemento": 3,
+                                        "complemento": "Cheddar",
+                                        "valor": 1.50
+                                    },
+                                    {
+                                        "cod_complemento": 3.2,
+                                        "cod_grupo_complemento": 3,
+                                        "complemento": "Hamburguer adicional",
+                                        "valor": 2.00
+                                    }
+                                ],
+                                "temValor": true,
+                                "MinimoComplemento": 0,
+                                "MaximoComplemento": 2
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "grupo": "Porcoes",
+                "produtos": [
+                    {
+                        "cod_produto": 9,
+                        "nome_produto": "BATATA SELVAGEM",
+                        "descricao": "Bla bla bla bla bla",
+                        "unidade": "UN",
+                        "cod_grupo": 2,
+                        "nome_grupo": "Porcoes",
+                        "vl_venda": 28.00,
+                        "codigo_pesquisa": "2.1",
+                        "promocao": "N",
+                        "promocao_valor": 0.00,
+                        "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+                        "tipo_pizza": "N",
+                        "gruposComplemento": [
+                            {
+                                "grupo_complemento": "Adicionais",
+                                "opcoes": [
+                                    {
+                                        "cod_complemento": 1.0,
+                                        "cod_grupo_complemento": 1,
+                                        "complemento": "Queijo Muçarela",
+                                        "valor": 3.00
+                                    },
+                                    {
+                                        "cod_complemento": 1.1,
+                                        "cod_grupo_complemento": 1,
+                                        "complemento": "Queijo Cheddar",
+                                        "valor": 3.00
+                                    }
+                                ],
+                                "temValor": true,
+                                "MinimoComplemento": 0,
+                                "MaximoComplemento": 2
+                            }
+                        ]
+                    },
+                    {
+                        "cod_produto": 1299,
+                        "nome_produto": "CALDO DE ABOBORA",
+                        "descricao": "Bla bla bla bla bla",
+                        "unidade": "UN",
+                        "cod_grupo": 2,
+                        "nome_grupo": "Porcoes",
+                        "vl_venda": 15.00,
+                        "codigo_pesquisa": "2.1",
+                        "promocao": "N",
+                        "promocao_valor": 0.00,
+                        "promocao_dt_validade": "0000-00-00T00:00:00.000000Z",
+                        "tipo_pizza": "N",
+                        "gruposComplemento": [
+                            {
+                                "grupo_complemento": "Adicionais",
+                                "opcoes": [
+                                    {
+                                        "cod_complemento": 1.0,
+                                        "cod_grupo_complemento": 1,
+                                        "complemento": "Queijo Muçarela",
+                                        "valor": 3.00
+                                    },
+                                    {
+                                        "cod_complemento": 1.1,
+                                        "cod_grupo_complemento": 1,
+                                        "complemento": "Pimenta de gotas",
+                                        "valor": 1.00
+                                    }
+                                ],
+                                "temValor": true,
+                                "MinimoComplemento": 0,
+                                "MaximoComplemento": 2
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
