@@ -19,16 +19,16 @@ const renderItems = () => {
                 itemsArea.innerHTML += 
                 `
                 <div class="item-to-buy">
-                    <h2>${item.name} <span class="delete-button" onclick="deleteItem(this)"><img width="30" height="30"src="/images/botao-x.png"></span></h2>
+                    <h2>${item.nome_produto} <span class="delete-button" onclick="deleteItem(this)"><img width="30" height="30"src="/images/botao-x.png"></span></h2>
                     <div class="info-to-buy">
                         <p>${(() => {
                             let text = ''
-                            item.groupsOptions.forEach(e => text += e.name + ': ' + e.value + '<br>')
+                            item.complementos.forEach(e => text += e.nome_complemento + ': ' + 'R$ ' + e.vl_complemento.toFixed(2).replace('.', ',') + '<br>')
                             return text
-                        })()} <br> Unidades: ${item.unities} <br>
-                        Informações adicionais: ${item.additionalInfo}
+                        })()} <br> Unidades: ${item.qtde} <br>
+                        Informações adicionais: ${item.obs}
                         </p>
-                        <h3 class="price">${item.value}</h3>
+                        <h3 class="price">R$ ${item.vl_total.toFixed(2).replace('.', ',')}</h3>
                     </div>
                 </div>
                 `
@@ -54,11 +54,11 @@ const renderItems = () => {
                 <h3 class="totalPrice">${(() => {
                     const prices = document.querySelectorAll('.price')
                     let total = 0
-                    prices.forEach(e => total += parseFloat(e.innerHTML.replace(',', '.')))   
+                    prices.forEach(e => total += parseFloat(e.innerHTML.replace(',', '.').split(' ')[1]))   
                     total = total.toFixed(2)
                     total = total.replace('.', ',')
                     console.log(total)
-                    return total
+                    return 'R$ ' + total
                 })()}
                 </h3>
             </div>
@@ -130,6 +130,15 @@ let requestType = 'delivery'
 const setForm = (type) => { 
 
     if (type === "delivery") {
+        let formasPagamento = document.querySelectorAll('.payment-item')
+        let options = (() => {
+            let options = "<option value='null'>Selecione uma forma de pagamento</option>"
+            for (var i = 0; i < formasPagamento.length; i++) {
+                options += `<option value="${formasPagamento[i].innerHTML}">${formasPagamento[i].innerHTML}</option>`
+            }
+            return options
+        })()
+
         let formType = `
         <input placeholder="Insira seu nome" type="text" name="Nome" id="name">
         <input placeholder="Insira seu telefone (com DDD)" type="tel" name="Celular" id="Celular">
@@ -140,7 +149,7 @@ const setForm = (type) => {
         <input placeholder="Endereço" type="text" name="Endereço" id="address">
         <div class="neighbor-reference">
             <input placeholder="Bairro" type="text" name="Bairro" id="neighbor">
-            <input placeholder="Referência" type="text" name="Referência" id="reference">
+            <input placeholder="Referência" type="text" name="complemento" id="reference">
         </div>
         <div class="city-state">
             <input placeholder="Cidade" type="text" name="Cidade" id="city">
@@ -148,12 +157,7 @@ const setForm = (type) => {
         </div>
         <select name="Pagamento" id="payment">
             <optgroup>
-                <option value="null">Forma de pagamento</option>
-                <option value="Dinheiro">Dinheiro</option>
-                <option value="Crédito mastercard">Crédito Mastercard</option>
-                <option value="Crédito visa">Crédito Visa</option>
-                <option value="Débito mastercard">Débito Mastercard</option>
-                <option value="Débito visa">Débito Visa</option>
+                ${options}
             </optgroup>
         </select>`
         form.innerHTML = formType

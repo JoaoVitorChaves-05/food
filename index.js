@@ -1,11 +1,12 @@
-import express, { json } from 'express';
+import express from 'express';
 import { engine } from 'express-handlebars';
 import fetch from "node-fetch";
-import queryString from 'query-string';
+import bodyParser from "body-parser";
 
 const app = express();
 
 app.use(express.static('public'))
+app.use(bodyParser.json())
 
 app.engine('handlebars', engine())
 app.set('view engine', 'handlebars');
@@ -14,10 +15,11 @@ app.set("views", "./views");
 const PORT = process.env.PORT || 3000
 
 app.get('/', async (req, res) => {
-    const restaurantes = await fetch('http://192.168.15.21:3000/api/restaurantes')
-    .then(res => res.json())
+    const restaurantes = await fetch('https://a4bf-187-121-39-2.ngrok.io/api/restaurantes/123')
+    .then((response) => response.json())
     .then(data => data)
-    console.log(restaurantes)
+    .catch(err => console.log(err))
+
     res.render('home', {
         restaurantes: restaurantes
     })
@@ -26,28 +28,56 @@ app.get('/', async (req, res) => {
 app.get('/:restaurante', async function(req, res) {
     const {restaurante} = req.params
 
-    let infoRestaurante = []
-    await fetch('http://192.168.15.21:3000/api/restaurante?restaurante=' + restaurante)
+    const chave = await fetch(`https://a4bf-187-121-39-2.ngrok.io/api/aberto/${restaurante}`)
     .then(response => response.json())
-    .then(data => infoRestaurante = data)
+    .then(response => {
+        if (response.message) {
+            res.send('<h1>Restaurante fechado!</h1>')
+            return
+        }
+        return response
+    })
+    .catch(err => console.log(err))
 
-    let endereco = infoRestaurante[0].Endereco
-    let telefone = infoRestaurante[0].Telefone
-    let mensagemDestaque = infoRestaurante[0].MensagemDestaque
-    let descricao = infoRestaurante[0].Descricao
-    let podeDelivery = infoRestaurante[0].PodeDelivery
-    let podeRetirar = infoRestaurante[0].PodeRetirar
+    let restaurantes = await fetch(`https://a4bf-187-121-39-2.ngrok.io/api/restaurantes/123`)
+    .then(response => response.json())
+    .then(response => response)
+    .catch(err => console.log(err))
 
-    res.render('restaurant', {
-        grupos: infoRestaurante[0].grupos,
-        restaurante: infoRestaurante[0].NomeRestaurante,
-        state: infoRestaurante[0].RestauranteAberto ? "aberto": "fechado",
-        endereco: endereco,
-        telefone: telefone,
-        mensagemDestaque: mensagemDestaque,
-        descricao: descricao,
-        podeDelivery: podeDelivery,
-        podeRetirar: podeRetirar,
+    let infoRestaurante = []
+
+    restaurantes.forEach(async (e) => {
+        if (restaurante === e.RestauranteApelido) {
+            //infoRestaurante = await fetch(`https://bb4f-200-170-124-158.ngrok.io/api/menu/${restaurante}/123`)
+            await fetch(`https://a4bf-187-121-39-2.ngrok.io/api/menu/${restaurante}/${chave}`)
+            .then(response => response.json())
+            .then(response => {
+
+                infoRestaurante = response
+
+                let endereco = infoRestaurante[0].Endereco
+                let telefone = infoRestaurante[0].Telefone
+                let mensagemDestaque = infoRestaurante[0].MensagemDestaque
+                let descricao = infoRestaurante[0].Descricao
+                let podeDelivery = infoRestaurante[0].PossuiDelivery
+                let podeRetirar = infoRestaurante[0].PossuiRetirar
+                let formasPagamento = infoRestaurante[0].FormasPagamento.split(';')
+
+                res.render('restaurant', {
+                    grupos: infoRestaurante[0].grupos,
+                    restaurante: infoRestaurante[0].NomeRestaurante,
+                    state: infoRestaurante[0].RestauranteAberto ? "aberto": "fechado",
+                    endereco: endereco,
+                    telefone: telefone,
+                    mensagemDestaque: mensagemDestaque,
+                    descricao: descricao,
+                    podeDelivery: podeDelivery,
+                    podeRetirar: podeRetirar,
+                    formasPagamento: formasPagamento,
+                })
+            })
+            .catch(err => console.log(err))
+        }
     })
 })
 
@@ -56,87 +86,91 @@ app.get('/:restaurante/pedido', async (req, res) => {
     const {restaurante} = req.params
     console.log(elemento)
     let produtos = []
-    await fetch('http://192.168.15.21:3000/api/restaurante?restaurante=' + restaurante)
+
+    const chave = await fetch(`https://a4bf-187-121-39-2.ngrok.io/api/aberto/${restaurante}`)
     .then(response => response.json())
-    .then(data => produtos = data)
+    .then(response => response)
+    .catch(err => console.log(err))
 
-    let produtoSelecionado = {}
-    let promocao = false
+    await fetch(`https://a4bf-187-121-39-2.ngrok.io/api/menu/${restaurante}/${chave}`)
+    .then(response => response.json())
+    .then(data => {
+        produtos = data
 
-    produtos[0].grupos.forEach(grupo => {
-        if (grupo.grupo === 'Promoção') {
-            grupo.produtos_em_promocao.forEach(produto => {
-                if (produto.nome_produto === elemento ) {
-                    produtoSelecionado = {...produto}
-                    promocao = produto.promocao === 'N' ? false : true
-                }
-            })
-        } else {
-            grupo.produtos.forEach(produto => {
-                if (produto.nome_produto === elemento ) {
-                    produtoSelecionado = {...produto}
-                    console.log(produtoSelecionado)
-                    promocao = produto.promocao === 'N' ? false : true
-                }
-            })
-        }
+        let produtoSelecionado = {}
+        let promocao = false
+
+        produtos[0].grupos.forEach(grupo => {
+            if (grupo.grupo === 'Promoção') {
+                grupo.produtos_em_promocao.forEach(produto => {
+                    if (produto.nome_produto === elemento ) {
+                        produtoSelecionado = {...produto}
+                        promocao = produto.promocao === 'N' ? false : true
+                    }
+                })
+            } else {
+                grupo.produtos.forEach(produto => {
+                    if (produto.nome_produto === elemento ) {
+                        produtoSelecionado = {...produto}
+                        console.log(produtoSelecionado)
+                        promocao = produto.promocao === 'N' ? false : true
+                    }
+                })
+            }
+        })
+
+        console.log(Object.keys(produtoSelecionado))
+        console.log(produtoSelecionado.grupoComplemento)
+
+        res.render('food', {
+            gruposComplementos: produtoSelecionado.grupoComplemento,
+            produtoSelecionado: produtoSelecionado,
+            temPromocao: promocao
+        })
     })
-
-    console.log(Object.keys(produtoSelecionado))
-    console.log(produtoSelecionado.gruposComplemento)
-
-    res.render('food', {
-        gruposComplementos: produtoSelecionado.gruposComplemento,
-        produtoSelecionado: produtoSelecionado,
-        temPromocao: promocao
-    })
-    /*
-    let currentGroup = ''
-
-    const gruposComplementos = []
-
-    let produtoSelecionado = produtos[0].produtos.filter(produto => produto.nome_produto === elemento)
-    
-    produtoSelecionado[0].adicionais.forEach(adicional => {
-        if (adicional.grupo_complemento !== currentGroup) {
-            currentGroup = adicional.grupo_complemento
-            gruposComplementos.push({grupo_complemento: adicional.grupo_complemento, adicionais: null, min: null, max: null})
-        }
-    })
-
-    gruposComplementos.forEach(grupo => {
-        let grupoComplemento = produtoSelecionado[0].adicionais.filter(adicional => adicional.grupo_complemento === grupo.grupo_complemento)
-        grupo.adicionais = grupoComplemento
-    })
-
-    produtoSelecionado[0].vl_venda = produtoSelecionado[0].vl_venda.toFixed(2)
-    produtoSelecionado[0].vl_venda = produtoSelecionado[0].vl_venda.replace('.', ',')
-
-    gruposComplementos[0].max = produtoSelecionado[0].Max
-    gruposComplementos[0].min = produtoSelecionado[0].Min
-
-    console.log(gruposComplementos)
-    res.render('food', {
-        gruposComplementos: gruposComplementos,
-        produtoSelecionado: produtoSelecionado[0]
-    })
-    */
+    .catch(err => console.log(err))
 })
 
-app.get('/api/restaurante', (req, res) => {
+app.get('/api/restaurante', async (req, res) => {
     const {restaurante} = req.query
 
-    if (restaurante === 'bar') {
-        res.sendFile('D:/Projetos/Trabalho/dkFood - Backend/arquivos json/estruturaBase.json')
-    }
-    
-    if (restaurante === 'pastel') {
-        res.sendFile('D:/Projetos/Trabalho/dkFood - Backend/arquivos json/estruturaBase2.json')
-    }
+    let restaurantes = await fetch('https://a4bf-187-121-39-2.ngrok.io/api/restaurantes/123')
+    .then(response => response.json())
+    .then(response => response)
+
+    restaurantes.forEach(async (e) => {
+        if (restaurante === e.RestauranteApelido) {
+            await fetch(`https://a4bf-187-121-39-2.ngrok.io/api/menu/${restaurante}/chave`)
+            .then(response => response.json())
+            .then(response => res.send(response))
+            .catch(err => console.log(err))
+        }
+    })
 })
 
-app.get('/api/restaurantes', (req, res) => {
-    res.sendFile('D:/Projetos/Trabalho/dkFood - Backend/arquivos json/restaurantes.json')
+app.get('/api/restaurantes', async (req, res) => {
+    await fetch('https://a4bf-187-121-39-2.ngrok.io/api/restaurantes/123')
+    .then(response => response.json())
+    .then(response => res.send(response))
+})
+
+app.get('/api/send', async (req, res) => {
+    const {pedido} = req.query
+    const {restaurante} = req.query
+
+    const chave = await fetch(`https://a4bf-187-121-39-2.ngrok.io/api/aberto/${restaurante}`)
+    .then(response => response.json())
+    .then(response => response)
+    .catch(err => console.log(err))
+
+
+    let pedidoEncoded = encodeURIComponent(pedido)
+    console.log(pedidoEncoded)
+    await fetch(`https://a4bf-187-121-39-2.ngrok.io/api/pedido/${restaurante}/${chave}/${pedidoEncoded}`)
+    .then(res => res.text())
+    .then(response => res.send(response))
+    .catch(er => console.log(er))
+
 })
 
 app.listen(PORT)

@@ -1,0 +1,46 @@
+[
+ {"data_pedido":"2021-12-14T10:10:00.000Z",
+  "nome_cliente":"Fernando",
+  "telefone":"12997932718",
+  "retira_entrada":"E",
+  "cep":"12328210",
+  "endereco":"av. Orlando Felipe Bonando",
+  "endereco_numero":"763",
+  "complemento":"sala 6",
+  "bairro":"Jardim Santa Maria",
+  "cidade":"Jacarei",
+  "estado":"SP",
+  "vl_pedido":32.00,
+  "produtos":[
+   {
+	  "id_produto": 1,
+	  "cod_produto":1,
+	  "nome_produto":"HOP BURGUER",
+	  "unidade":"UN",
+	  "cod_grupo":1,
+	  "qtde":1.00,
+	  "vl_unitario":28.00,
+	  "vl_total":32.00,
+	  "tipo_pizza":false,
+	  "id_pizza":0,
+	  "promocao":false,
+	  "obs":"",
+	  "complementos":[
+	  {
+		"id_complemento":1,
+		"cod_complemento":1,
+		"nome_complemento":"Pao australiano",
+		"vl_complemento":0.00
+	   },
+	  {
+		"id_complemento":2,
+		"cod_complemento":10,
+		"nome_complemento":"Hamburguer adicional",
+		"vl_complemento":4.00
+	   }  	  
+	  ]
+    }
+  ]
+ }
+]
+  

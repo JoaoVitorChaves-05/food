@@ -31,6 +31,6 @@ links[2].addEventListener("click", () => {
 
 const restaurantes = document.querySelectorAll(".item-restaurant")
 restaurantes.forEach(item => item.addEventListener('click', () => {
-    window.location.href = 'http://192.168.15.21:3000/' + item.childNodes[3].childNodes[1].innerHTML.toLowerCase()
+    window.location.href = 'http://192.168.15.21:3000/' + item.childNodes[3].childNodes[1].innerHTML
     console.log(window.location.href)
 }))

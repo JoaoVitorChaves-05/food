@@ -9,11 +9,13 @@
 <main>
     <div class="group-info">
         <div class="menu-info">
-            <div class="info-item">
-                <p style="font-size: 1.0rem">
-                    {{descricao}}
-                </p>
-            </div>
+            {{#if descricao}}
+                <div class="info-item">
+                    <p style="font-size: 1.0rem">
+                        {{descricao}}
+                    </p>
+                </div>
+            {{/if}}
             {{#if mensagemDestaque}}
                 <div style="margin-top: 10px;" class="info-item">
                     <p>
@@ -107,6 +109,11 @@
                         <h4>Retirar</h4>
                     </div>
                 {{/if}}
+            </div>
+            <div style="display: none" class="payment-forms">
+                {{#each formasPagamento}}
+                <p class="payment-item">{{this}}</p>
+                {{/each}}
             </div>
             <form name="userInfo" action="/delivery" method="post">
 

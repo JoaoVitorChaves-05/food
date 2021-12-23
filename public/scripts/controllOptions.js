@@ -19,7 +19,7 @@ let unities = parseFloat(document.querySelector('#quantity').innerHTML)
 let subTotal = (parseFloat(initialValue.innerHTML) + valueOfOptions) * unities
 
 function updateSubTotal() {
-    subTotal = (parseFloat(initialValue.innerHTML) + valueOfOptions) * unities
+    subTotal = (parseFloat(initialValue.innerHTML.replace(',', '.')) + valueOfOptions) * unities
     const subTotalElement = document.querySelector('#subTotal')
     subTotal = subTotal.toFixed(2)
     subTotal = subTotal.replace('.', ',')
@@ -128,10 +128,20 @@ buyButton.addEventListener("click", () => {
             for (let j = 0; j < groupsElements[i].length; j++) {
                 if (groupsElements[i][j].lastElementChild.checked) {
                     groupsOptions.push(Object.freeze({
-                        groupID: groupsElements[i],
-                        groupName: document.querySelectorAll('.title-group h2')[i],
-                        name: groupsElements[i][j].children[0].innerHTML,
-                        value: groupsElements[i][j].lastElementChild.previousElementSibling.innerHTML[1] === "$" ? groupsElements[i][j].lastElementChild.previousElementSibling.innerHTML : "R$ 0,00"
+                        id_complemento: groupsOptions.length + 1,
+                        cod_complemento: parseInt(document.querySelectorAll('.cod_complemento')[i + j].innerHTML, 10),
+                        nome_complemento: groupsElements[i][j].children[0].innerHTML,
+                        vl_complemento: (() => {
+                            if (groupsElements[i][j].lastElementChild.previousElementSibling.innerHTML[1] === "$") {
+                                let el = groupsElements[i][j].lastElementChild.previousElementSibling.innerHTML
+                                el = el.split(' ')[1]
+                                el = el.replace(',', '.')
+                                el = parseFloat(el)
+                                return el
+                            }
+                            return 0.00
+                        })(),
+                        qtde_complemento: 1.00
                     }))
                 }
             }
@@ -141,22 +151,40 @@ buyButton.addEventListener("click", () => {
 
             let pedido = JSON.parse(sessionStorage.getItem('pedido'))
             pedido = [...pedido, Object.freeze({
-                name: document.querySelector("h1").innerHTML,
-                groupsOptions: groupsOptions,
-                additionalInfo: document.querySelector('textarea').value,
-                value: document.querySelector('#subTotal').innerHTML,
-                unities: quantityText.innerHTML,
+                id_produto: pedido.length + 1,
+                cod_produto: parseInt(document.querySelector('.cod_produto').innerHTML, 10),
+                nome_produto: document.querySelector("h1").innerHTML,
+                complementos: groupsOptions,
+                obs: document.querySelector('textarea').value,
+                vl_unitario: parseFloat(document.querySelector('.principal-price').innerHTML.replace(',', '.')),
+                vl_total: parseFloat(document.querySelector("#subTotal").innerHTML.replace(',', '.')),
+                qtde: parseFloat(quantityText.innerHTML),
+                tipo_pizza: false,
+                id_pizza: 0,
+                promocao: false,
+                unidade: document.querySelector('.unidade').innerHTML,
+                codigo_pesquisa: document.querySelector(".cod_pesquisa").innerHTML,
+                cod_grupo: parseInt(document.querySelector('.cod_grupo').innerHTML, 10)
             })]
             sessionStorage.setItem('pedido', JSON.stringify(pedido))
             console.log('adicionou outro produto')
         }
         else {
             pedido = [Object.freeze({
-                name: document.querySelector("h1").innerHTML,
-                groupsOptions: groupsOptions,
-                additionalInfo: document.querySelector('textarea').value,
-                value: document.querySelector('#subTotal').innerHTML,
-                unities: quantityText.innerHTML,
+                id_produto: 1,
+                cod_produto: parseInt(document.querySelector('.cod_produto').innerHTML, 10),
+                nome_produto: document.querySelector("h1").innerHTML,
+                complementos: groupsOptions,
+                obs: document.querySelector('textarea').value,
+                vl_unitario: parseFloat(document.querySelector('.principal-price').innerHTML.replace(',', '.')),
+                vl_total: parseFloat(document.querySelector("#subTotal").innerHTML.replace(',', '.')),
+                qtde: parseFloat(quantityText.innerHTML),
+                tipo_pizza: false,
+                id_pizza: 0,
+                promocao: false,
+                unidade: document.querySelector('.unidade').innerHTML,
+                codigo_pesquisa: document.querySelector(".cod_pesquisa").innerHTML,
+                cod_grupo: parseInt(document.querySelector('.cod_grupo').innerHTML, 10)
             })]
             sessionStorage.setItem('pedido', JSON.stringify(pedido))
             console.log('adicionou um produto pela primeira vez')

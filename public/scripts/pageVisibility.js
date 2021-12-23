@@ -3,7 +3,7 @@ document.addEventListener("visibilitychange", () => {
     if(document.visibilityState==="hidden") {
         console.log(" >> This window is hidden")
         //document.body.style.display="none"
-        setTimeout(()=>{
+        setTimeout(() => {
             if (sessionStorage.pedido) {
                 let pedido = JSON.parse(sessionStorage.pedido)
                 if (pedido.length > 0) {
@@ -12,7 +12,7 @@ document.addEventListener("visibilitychange", () => {
                     renderItems()
                 }
             }
-        }, 3000)
+        }, 300000)
     }
     else {
         console.log(" >> This window is visible")

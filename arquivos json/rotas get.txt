@@ -1,0 +1,17 @@
+rotas GET
+Menu
+/api/menu/restaurante/chave
+/api/menu/bar/123
+
+Grupos
+/api/grupoproduto/restaurante/chave
+/api/grupoproduto/bar/123
+
+Restaurantes
+/api/restaurantes/chave
+/api/restaurantes/123
+
+
+Pedido
+/api/pedido/restaurantes/chave/json
+/api/pedido/bar/123/%5B%0D%0A+%7B%22data_pedido%22%3A%222021-12-14T10%3A10%3A00.000Z%22%2C%0D%0A++%22nome_cliente%22%3A%22Fernando%22%2C%0D%0A++%22telefone%22%3A%2212997932718%22%2C%0D%0A++%22retira_entrada%22%3A%22E%22%2C%0D%0A++%22cep%22%3A%2212328210%22%2C%0D%0A++%22endereco%22%3A%22av.+Orlando+Felipe+Bonando%22%2C%0D%0A++%22endereco_numero%22%3A%22763%22%2C%0D%0A++%22complemento%22%3A%22sala+6%22%2C%0D%0A++%22bairro%22%3A%22Jardim+Santa+Maria%22%2C%0D%0A++%22cidade%22%3A%22Jacarei%22%2C%0D%0A++%22estado%22%3A%22SP%22%2C%0D%0A++%22vl_pedido%22%3A32.00%2C%0D%0A++%22produtos%22%3A%5B%0D%0A+++%7B%0D%0A%09++%22id_produto%22%3A+1%2C%0D%0A%09++%22cod_produto%22%3A1%2C%0D%0A%09++%22nome_produto%22%3A%22HOP+BURGUER%22%2C%0D%0A%09++%22unidade%22%3A%22UN%22%2C%0D%0A%09++%22cod_grupo%22%3A1%2C%0D%0A%09++%22qtde%22%3A1.00%2C%0D%0A%09++%22vl_unitario%22%3A28.00%2C%0D%0A%09++%22vl_total%22%3A32.00%2C%0D%0A%09++%22tipo_pizza%22%3Afalse%2C%0D%0A%09++%22id_pizza%22%3A0%2C%0D%0A%09++%22promocao%22%3Afalse%2C%0D%0A%09++%22obs%22%3A%22%22%2C%0D%0A%09++%22complementos%22%3A%5B%0D%0A%09++%7B%0D%0A%09%09%22id_complemento%22%3A1%2C%0D%0A%09%09%22cod_complemento%22%3A1%2C%0D%0A%09%09%22nome_complemento%22%3A%22Pao+australiano%22%2C%0D%0A%09%09%22vl_complemento%22%3A0.00%0D%0A%09+++%7D%2C%0D%0A%09++%7B%0D%0A%09%09%22id_complemento%22%3A2%2C%0D%0A%09%09%22cod_complemento%22%3A10%2C%0D%0A%09%09%22nome_complemento%22%3A%22Hamburguer+adicional%22%2C%0D%0A%09%09%22vl_complemento%22%3A4.00%0D%0A%09+++%7D++%09++%0D%0A%09++%5D%0D%0A++++%7D%0D%0A++%5D%0D%0A+%7D%0D%0A%5D%0D%0A++

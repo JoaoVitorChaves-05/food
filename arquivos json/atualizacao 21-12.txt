@@ -1,0 +1,22 @@
+
+Novos campos no JSon Pedido
+ forma de pagamento
+ qtde complemento
+ codigo pesquisa
+ 
+Novos campos do Json Menu
+ PossuiRetira
+ PossuiDelivery
+ FormasPagamento
+ Separando o complemento por grupo
+ 
+Nova Rota
+/api/aberto/restaurante
+ - retorna "FECHADO" quando restaurante fechado
+ - quando restaurate aberto retorna uma chave valida por 30 minutos
+ - ai nas rotas, necessário passar uma chave valida
+ /api/menu
+ /api/grupoproduto
+ /api/pedido
+
+ 

@@ -1,0 +1,36 @@
+[
+ {"data_pedido":"2021-12-21T20:10:00.000Z",
+  "nome_cliente":"Maria",
+  "telefone":"12997932718",
+  "retira_entrega":"E",
+  "cep":"12328210",
+  "endereco":"av. 9 de Julho",
+  "endereco_numero":"763",
+  "complemento":"sala 6",
+  "bairro":"Jardim Santa Maria",
+  "cidade":"Jacarei",
+  "estado":"SP",
+  "forma_pagamento":"Dinheiro",
+  "vl_pedido":60.00,
+  "produtos":[
+   {
+	  "id_produto": 1,
+	  "cod_produto":483,
+          "codigo_pesquisa":"789490423862",
+	  "nome_produto":"HAMBURGUER PICANHA GOURMET SEARA 360 G",
+	  "unidade":"UN",
+	  "cod_grupo":17,
+	  "qtde":1.00,
+	  "vl_unitario":22.60,
+	  "vl_total":22.60,
+	  "tipo_pizza":false,
+	  "id_pizza":0,
+	  "promocao":false,
+	  "obs":"",
+	  "complementos":[  
+	  ]
+    }
+  ]
+ }
+]
+  

@@ -65,6 +65,16 @@ nav {
 
     margin-bottom: 3%;
     cursor: pointer;
+
+}
+
+.menu-item h2 {
+    font-size: 1.0rem;
+    word-wrap: break-word;
+}
+
+.menu-item h3 {
+    font-size: 0.8rem;
 }
 
 .menu-info {
@@ -89,7 +99,7 @@ nav {
 }
 
 .info-item {
-    flex: 3;
+    flex: 2;
     padding-left: 10px;
 }
 
@@ -364,4 +374,21 @@ html {
 .group-info {
     max-width: 500px;
     margin: 0 auto;
+}
+
+@media screen and (max-width: 400px) {
+    body main .menu .group .menu-items .menu-item {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .menu-item h2, .menu-item h3 {
+        font-size: 1.0rem;
+    }
+
+    .price-item {
+        align-self: center;
+        margin-top: 5px;
+    }
 }

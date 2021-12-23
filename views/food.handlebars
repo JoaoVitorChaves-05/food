@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/styles/pedido.css" type="text/css">
 <main>
     <div class="pedido">
-        <div class="info-main">
+        <div class="info-main"> 
             <h1>{{produtoSelecionado.nome_produto}}</h1>
             <img src="/images/hamburguer-de-queijo.png" alt="Foto do pedido" width="150px" height="150px">
             <div class="info-food">
@@ -11,11 +11,21 @@
                     {{else}}
                     <h2 class="principal-price">{{produtoSelecionado.vl_venda}}</h2>
                 {{/if}}
-                </div>
+                <span style="display: none;" class="cod_produto">{{produtoSelecionado.cod_produto}}</span>
+                <span style="display: none;" class="tipo_pizza">{{produtoSelecionado.tipo_pizza}}</span>
+                <span style="display: none;" class="promocao">{{produtoSelecionado.promocao}}</span>
+                <span style="display: none;" class="id_pizza">{{produtoSelecionado.id_pizza}}</span>
+                <span style="display: none;" class="unidade">{{produtoSelecionado.unidade}}</span>
+                <span style="display: none;" class="cod_pesquisa">{{produtoSelecionado.codigo_pesquisa}}</span>
+                <span style="display: none;" class="cod_grupo">{{produtoSelecionado.cod_grupo}}</span>
+            </div>
         </div>
         <form name="options" action="http://192.168.15.21:3000/cardapio/submit" method="post">
             <div class="content">
                 {{#each gruposComplementos}}
+                    {{#each this.opcoes}}
+                    <span style="display: none;" class="cod_complemento">{{this.cod_complemento}}</span>
+                    {{/each}}
                     <div class="group required group-options">
                         <div class="title-group">
                             <h2>{{this.grupo_complemento}}</h2>
@@ -27,6 +37,7 @@
                         </div>
                         <div class="options">
                             {{#each this.opcoes}}
+                                
                                 {{#if this.valor}}
                                     <div class="option option-without-price">
                                         <p class="text-option">{{this.complemento}}</p>
