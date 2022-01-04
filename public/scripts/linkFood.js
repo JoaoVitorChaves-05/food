@@ -3,7 +3,7 @@ items.forEach(e => e.addEventListener("click", () => {
     const produto = e.children[1].children[0]
     //const grupo = e
     const state = document.querySelector("#state")
-    window.location.href += `/pedido?state=${state.innerHTML}` + "&elemento=" + produto.innerHTML + "&restaurante=" + window.location.href.split('/')[window.location.href.split('/').length - 1]
+    window.location.href += `/pedido?state=${state.innerHTML}` + "&elemento=" + encodeURIComponent(produto.innerHTML) + "&restaurante=" + window.location.href.split('/')[window.location.href.split('/').length - 1]
 }))
 
 const backButton = document.querySelector(".back-button")
@@ -11,16 +11,19 @@ backButton.addEventListener("click", () => window.history.back())
 
 const confirmButton = document.querySelector(".confirm-button")
 confirmButton.addEventListener("click", async () => {
+    window.alert("Ao confirmar seu pedido iremos abrir uma conversa via WhatsApp com a loja. É muito importante não fechar essa conversa")
+    
     if (validateForm() === false) 
         return 
 
     const state = document.querySelector("#state")
 
-    if (sessionStorage.pedido && JSON.parse(sessionStorage.pedido)[0] != null) {
+    if (sessionStorage.pedido) {
         if (state.innerHTML === "aberto") {
             let pedido = JSON.parse(sessionStorage.pedido)
+            //console.log(pedido)
             
-            sessionStorage.setItem('pedido', JSON.stringify([]))
+            //sessionStorage.setItem('pedido', JSON.stringify([]))
             updateStateModal(false)
 
             let numeroPedido
@@ -50,6 +53,7 @@ confirmButton.addEventListener("click", async () => {
                 estado: form[8].value,
                 vl_pedido: (() => {
                     let value = 0.00
+                    console.log(pedido)
                     pedido.forEach(e => {
                         console.log(e.vl_total)
                         let newValue = e.vl_total
@@ -68,6 +72,8 @@ confirmButton.addEventListener("click", async () => {
                 })(),
                 produtos: pedido
             }
+
+            window.alert("Aguarde, enviando pedido para restaurante")
             
             await fetch('/api/send?pedido=' + encodeURIComponent(JSON.stringify(info)) + '&restaurante=' + encodeURIComponent(window.location.pathname.replace('/', '')))
             .then((response) => response.text())
@@ -118,5 +124,4 @@ confirmButton.addEventListener("click", async () => {
         window.alert("Adicione algum produto na sacola!")
         updateStateModal(false)
     }
-    
 })

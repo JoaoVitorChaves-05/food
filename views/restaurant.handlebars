@@ -5,6 +5,11 @@
         <h1 id="title">{{restaurante}}</h1>
         <h2 style="font-size: medium;">Restaurante está: <span id="state">{{state}}</span></h2>
     </div>
+    {{#if adicionado}}
+    <div class="product-added">
+        <p>O produto foi adicionado no carrinho</p>
+    </div>
+    {{/if}}
 </nav>
 <main>
     <div class="group-info">
@@ -16,13 +21,7 @@
                     </p>
                 </div>
             {{/if}}
-            {{#if mensagemDestaque}}
-                <div style="margin-top: 10px;" class="info-item">
-                    <p>
-                        Aviso: <br>{{mensagemDestaque}}
-                    </p>
-                </div>
-            {{/if}}
+            
             <div style="margin-top: 10px;" class="info-item">
                 <p>
                     Dica: <br>
@@ -33,6 +32,20 @@
             </div>
         </div>
     </div>
+
+    {{#if mensagemDestaque}}
+        <div class="group-info">
+            <div style="margin-top: 10px;" class="msg-destaque">
+                <div class="nav-destaque">
+                    <h2>Aviso</h2>
+                </div>
+                <p>
+                    {{mensagemDestaque}}
+                </p>
+            </div>
+        </div>
+    {{/if}}
+
     <div class="menu">
         {{#each grupos}}
         <div class="group">
@@ -128,6 +141,7 @@
             </div>
         </div>
     </div>
+    
 </main>
 <footer>
     <div class="back-button">

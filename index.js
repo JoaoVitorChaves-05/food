@@ -27,9 +27,10 @@ app.get('/', async (req, res) => {
 
 app.get('/:restaurante', async function(req, res) {
     const {restaurante} = req.params
+    const {adicionado} = req.query
 
     const chave = await fetch(`https://a4bf-187-121-39-2.ngrok.io/api/aberto/${restaurante}`)
-    .then(response => response.json())
+    .then(response => response.text())
     .then(response => {
         if (response.message) {
             res.send('<h1>Restaurante fechado!</h1>')
@@ -38,6 +39,8 @@ app.get('/:restaurante', async function(req, res) {
         return response
     })
     .catch(err => console.log(err))
+
+    console.log('Chave: ' + chave)
 
     let restaurantes = await fetch(`https://a4bf-187-121-39-2.ngrok.io/api/restaurantes/123`)
     .then(response => response.json())
@@ -60,7 +63,7 @@ app.get('/:restaurante', async function(req, res) {
                 let mensagemDestaque = infoRestaurante[0].MensagemDestaque
                 let descricao = infoRestaurante[0].Descricao
                 let podeDelivery = infoRestaurante[0].PossuiDelivery
-                let podeRetirar = infoRestaurante[0].PossuiRetirar
+                let podeRetirar = infoRestaurante[0].PossuiRetira
                 let formasPagamento = infoRestaurante[0].FormasPagamento.split(';')
 
                 res.render('restaurant', {
@@ -69,11 +72,12 @@ app.get('/:restaurante', async function(req, res) {
                     state: infoRestaurante[0].RestauranteAberto ? "aberto": "fechado",
                     endereco: endereco,
                     telefone: telefone,
-                    mensagemDestaque: mensagemDestaque,
+                    mensagemDestaque: 'Hoje não temos o delivery',
                     descricao: descricao,
                     podeDelivery: podeDelivery,
                     podeRetirar: podeRetirar,
                     formasPagamento: formasPagamento,
+                    adicionado: adicionado,
                 })
             })
             .catch(err => console.log(err))
@@ -88,9 +92,10 @@ app.get('/:restaurante/pedido', async (req, res) => {
     let produtos = []
 
     const chave = await fetch(`https://a4bf-187-121-39-2.ngrok.io/api/aberto/${restaurante}`)
-    .then(response => response.json())
+    .then(response => response.text())
     .then(response => response)
     .catch(err => console.log(err))
+    console.log(chave)
 
     await fetch(`https://a4bf-187-121-39-2.ngrok.io/api/menu/${restaurante}/${chave}`)
     .then(response => response.json())
@@ -159,7 +164,7 @@ app.get('/api/send', async (req, res) => {
     const {restaurante} = req.query
 
     const chave = await fetch(`https://a4bf-187-121-39-2.ngrok.io/api/aberto/${restaurante}`)
-    .then(response => response.json())
+    .then(response => response.text())
     .then(response => response)
     .catch(err => console.log(err))
 

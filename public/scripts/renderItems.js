@@ -2,39 +2,65 @@ const renderItems = () => {
     const itemsArea = document.querySelector('.items-area')
     itemsArea.innerHTML = ''
 
+    let params = (new URL(document.location)).searchParams;
 
     if (sessionStorage.pedido) {
-        /*
-        {
-            name: document.querySelector("h1").innerHTML,
-            groupsOptions: groupsOptions,
-            value: document.querySelector('#subTotal').innerHTML,
-            unities: quantityText.innerHTML
-        }
-        */
-        const items = JSON.parse(sessionStorage.pedido).filter(item => item !== null)
+        if (JSON.parse(sessionStorage.pedido).restaurante === document.location.pathname.replace('/', '')) {
+            const items = JSON.parse(sessionStorage.pedido).pedido.filter(item => item !== null)
 
-        if (items.length > 0) {
-            for (let item of items) {
-                itemsArea.innerHTML += 
+            if (items.length > 0) {
+                for (let item of items) {
+                    itemsArea.innerHTML += 
+                    `
+                    <div class="item-to-buy">
+                        <h2>${item.nome_produto} <span class="delete-button" onclick="deleteItem(this)"><img width="30" height="30"src="/images/botao-x.png"></span></h2>
+                        <div class="info-to-buy">
+                            <p>${(() => {
+                                let text = ''
+                                item.complementos.forEach(e => text += e.nome_complemento + ': ' + 'R$ ' + e.vl_complemento.toFixed(2).replace('.', ',') + '<br>')
+                                return text
+                            })()} <br> Unidades: ${item.qtde} <br>
+                            Informações adicionais: ${item.obs}
+                            </p>
+                            <h3 class="price">R$ ${item.vl_total.toFixed(2).replace('.', ',')}</h3>
+                        </div>
+                    </div>
+                    `
+                }
+
+            } else {
+                itemsArea.innerHTML = ''
+                itemsArea.innerHTML +=
+                `
+                <div class="not-found">
+                    <h2>Ainda não adicionou nada no carrinho!</h2>
+                </div>
+                `
+                return
+            }
+
+            itemsArea.innerHTML += 
                 `
                 <div class="item-to-buy">
-                    <h2>${item.nome_produto} <span class="delete-button" onclick="deleteItem(this)"><img width="30" height="30"src="/images/botao-x.png"></span></h2>
-                    <div class="info-to-buy">
-                        <p>${(() => {
-                            let text = ''
-                            item.complementos.forEach(e => text += e.nome_complemento + ': ' + 'R$ ' + e.vl_complemento.toFixed(2).replace('.', ',') + '<br>')
-                            return text
-                        })()} <br> Unidades: ${item.qtde} <br>
-                        Informações adicionais: ${item.obs}
-                        </p>
-                        <h3 class="price">R$ ${item.vl_total.toFixed(2).replace('.', ',')}</h3>
+                    
+                    <div class="areaTotal">
+                        <h2>Total</h2>
+                        <h3 class="totalPrice">${(() => {
+                            const prices = document.querySelectorAll('.price')
+                            let total = 0
+                            prices.forEach(e => total += parseFloat(e.innerHTML.replace(',', '.').split(' ')[1]))   
+                            total = total.toFixed(2)
+                            total = total.replace('.', ',')
+                            console.log(total)
+                            return 'R$ ' + total
+                        })()}
+                        </h3>
                     </div>
                 </div>
                 `
-            }
-
-        } else {
+            sessionStorage.setItem('pedido', JSON.stringify(items))
+        }
+        else {
             itemsArea.innerHTML = ''
             itemsArea.innerHTML +=
             `
@@ -42,30 +68,7 @@ const renderItems = () => {
                 <h2>Ainda não adicionou nada no carrinho!</h2>
             </div>
             `
-            return
         }
-
-        itemsArea.innerHTML += 
-        `
-        <div class="item-to-buy">
-            
-            <div class="areaTotal">
-                <h2>Total</h2>
-                <h3 class="totalPrice">${(() => {
-                    const prices = document.querySelectorAll('.price')
-                    let total = 0
-                    prices.forEach(e => total += parseFloat(e.innerHTML.replace(',', '.').split(' ')[1]))   
-                    total = total.toFixed(2)
-                    total = total.replace('.', ',')
-                    console.log(total)
-                    return 'R$ ' + total
-                })()}
-                </h3>
-            </div>
-        </div>
-        `
-        sessionStorage.setItem('pedido', JSON.stringify(items))
-
     } else {
         itemsArea.innerHTML = ''
         itemsArea.innerHTML +=
