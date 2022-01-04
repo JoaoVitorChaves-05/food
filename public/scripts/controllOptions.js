@@ -149,10 +149,10 @@ buyButton.addEventListener("click", () => {
 
         if (sessionStorage.hasOwnProperty('pedido'))   {
 
-            if (sessionStorage.pedido.restaurante === params.get('restaurante')) {
+            if (JSON.parse(sessionStorage.pedido).restaurante === params.get('restaurante')) {
                 let pedido = JSON.parse(sessionStorage.getItem('pedido'))
                 pedido.pedido = [...pedido.pedido, Object.freeze({
-                    id_produto: pedido.length + 1,
+                    id_produto: pedido.pedido.length + 1,
                     cod_produto: parseInt(document.querySelector('.cod_produto').innerHTML, 10),
                     nome_produto: document.querySelector("h1").innerHTML,
                     complementos: groupsOptions,
