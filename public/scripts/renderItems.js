@@ -58,7 +58,7 @@ const renderItems = () => {
                     </div>
                 </div>
                 `
-            sessionStorage.setItem('pedido', JSON.stringify(items))
+            sessionStorage.setItem('pedido', JSON.stringify({restaurante: window.location.pathname.replace('/', ''), pedido: items}))
         }
         else {
             itemsArea.innerHTML = ''
@@ -82,7 +82,7 @@ const renderItems = () => {
 
 const deleteItem = (item) => {
     const buttons = document.querySelectorAll('.delete-button')
-    let items = JSON.parse(sessionStorage.pedido)
+    let items = JSON.parse(sessionStorage.pedido).pedido
 
     const buttonsArray = []
     buttons.forEach(e => buttonsArray.push(e))
@@ -90,7 +90,7 @@ const deleteItem = (item) => {
     const index = buttonsArray.indexOf(item)
 
     delete items[index]
-    sessionStorage.setItem('pedido', JSON.stringify(items))
+    sessionStorage.setItem('pedido', JSON.stringify({restaurante: window.location.pathname.replace('/', ''), pedido: items}))
     renderItems()
 }
 

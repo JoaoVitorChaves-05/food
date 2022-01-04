@@ -1,5 +1,3 @@
-console.log(JSON.parse(sessionStorage.pedido))
-
 const items = document.querySelectorAll(".menu-item")
 items.forEach(e => e.addEventListener("click", () => {
     const produto = e.children[1].children[0]
@@ -19,13 +17,13 @@ confirmButton.addEventListener("click", async () => {
 
     const state = document.querySelector("#state")
 
-    if (sessionStorage.pedido && JSON.parse(sessionStorage.pedido)[0] !== null) {
+    if (sessionStorage.pedido && JSON.parse(sessionStorage.pedido).pedido[0] !== null) {
         if (state.innerHTML === "aberto") {
-            let pedido = JSON.parse(sessionStorage.pedido)
+            let pedido = JSON.parse(sessionStorage.pedido).pedido
             window.alert("Ao confirmar seu pedido iremos abrir uma conversa via WhatsApp com a loja. É muito importante não fechar essa conversa")
             //console.log(pedido)
             
-            //sessionStorage.setItem('pedido', JSON.stringify([]))
+            sessionStorage.setItem('pedido', JSON.stringify([]))
             updateStateModal(false)
 
             let numeroPedido
