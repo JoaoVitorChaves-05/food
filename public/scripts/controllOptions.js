@@ -212,8 +212,6 @@ buyButton.addEventListener("click", () => {
             sessionStorage.setItem('pedido', JSON.stringify({restaurante: params.get("restaurante"), pedido: produto}))
             console.log('adicionou um produto pela primeira vez')
         }
-    
-        console.log(JSON.parse(sessionStorage.pedido))
     } else {
         window.alert("Restaurante está fechado!")
     }
