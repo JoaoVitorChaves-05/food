@@ -11,10 +11,11 @@ backButton.addEventListener("click", () => window.history.back())
 
 const confirmButton = document.querySelector(".confirm-button")
 confirmButton.addEventListener("click", async () => {
-    window.alert("Ao confirmar seu pedido iremos abrir uma conversa via WhatsApp com a loja. É muito importante não fechar essa conversa")
     
     if (validateForm() === false) 
         return 
+
+    window.alert("Ao confirmar seu pedido iremos abrir uma conversa via WhatsApp com a loja. É muito importante não fechar essa conversa")
 
     const state = document.querySelector("#state")
 
