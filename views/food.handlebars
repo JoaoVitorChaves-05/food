@@ -24,13 +24,13 @@
             <div class="content">
                 {{#each gruposComplementos}}
                     {{#each this.opcoes}}
-                    <span style="display: none;" class="cod_complemento">{{this.cod_complemento}}</span>
+                    <span style="display: none;" class="cod_complemento">{{this.cod_complemento}}:{{this.complemento}}</span>
                     {{/each}}
-                    <div class="group required group-options">
+                    <div class="group group-options">
                         <div class="title-group">
                             <h2>{{this.grupo_complemento}}</h2>
                             {{#if this.MinimoComplemento}}
-                                <h3 class="maxOptions">Obrigatório (Máximo de opções: {{this.MaximoComplemento}})</h3>
+                                <h3 class="maxOptions required">Obrigatório (Máximo de opções: {{this.MaximoComplemento}})</h3>
                                 {{else}}
                                 <h3 class="maxOptions">Opcional (Máximo de opções: {{this.MaximoComplemento}})</h3>
                             {{/if}}
@@ -42,12 +42,16 @@
                                     <div class="option option-without-price">
                                         <p class="text-option">{{this.complemento}}</p>
                                         <p class="price">R$ {{this.valor}}</p>
-                                        <input type="checkbox" value="1" name="option 1" onclick="verificar(this)">
+                                        <div class="checkboxArea">
+                                            <input type="checkbox" value="1" name="option 1" onchange="verificar(this)">
+                                        </div>
                                     </div>
                                     {{else}}
                                     <div class="option option-without-price">
                                         <p class="text-option">{{this.complemento}}</p>
-                                        <input type="checkbox" value="0" name="option 1" onclick="verificar(this)">
+                                        <div class="checkboxArea">
+                                            <input type="checkbox" value="0" name="option 1" onchange="verificar(this)">
+                                        </div>
                                     </div>
                                 {{/if}}
                                 

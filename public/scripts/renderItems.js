@@ -7,7 +7,7 @@ const renderItems = () => {
     if (sessionStorage.pedido) {
         if (JSON.parse(sessionStorage.pedido).restaurante === document.location.pathname.replace('/', '')) {
             const items = JSON.parse(sessionStorage.pedido).pedido.filter(item => item !== null)
-
+            console.log(items)
             if (items.length > 0) {
                 for (let item of items) {
                     itemsArea.innerHTML += 
@@ -17,7 +17,7 @@ const renderItems = () => {
                         <div class="info-to-buy">
                             <p>${(() => {
                                 let text = ''
-                                item.complementos.forEach(e => text += e.nome_complemento + ': ' + 'R$ ' + e.vl_complemento.toFixed(2).replace('.', ',') + '<br>')
+                                item.complementos.forEach(e => text += e.nome_complemento + ': ' + 'R$ ' + e.vl_complemento.toFixed(2).replace('.', ',') + ' x ' + e.qtde_complemento + ' unidade(s)' + '<br>')
                                 return text
                             })()} <br> Unidades: ${item.qtde} <br>
                             Informações adicionais: ${item.obs}

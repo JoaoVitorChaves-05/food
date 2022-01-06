@@ -1,17 +1,3 @@
-const groups = document.querySelectorAll(".group")
-const groupsElements = []
-
-var elementsOption = document.querySelectorAll('.options')
-for (var i = 0; i < elementsOption.length; i++) {
-    groupsElements.push(elementsOption[i].children)
-}
-
-var optionsPerSection = []
-
-const maxOptions = document.querySelectorAll(".maxOptions")
-
-const options = []
-
 let valueOfOptions = 0.00
 const initialValue = document.querySelector(".principal-price")
 let unities = parseFloat(document.querySelector('#quantity').innerHTML)
@@ -26,56 +12,168 @@ function updateSubTotal() {
     subTotalElement.innerHTML = subTotal
 }
 
+const checkboxesState = (() => {
+    let list = []
+
+    document.querySelectorAll("input").forEach(e => {
+        list.push({
+            id: '',
+            state: e.checked,
+            value: (() => {
+                if (e.parentNode.parentNode.children[1].classList.contains('price')) {
+                    return parseFloat(e.parentNode.prepreviousElementSibling.innerHTML.split(' ')[1].replace(',', '.'))
+                }
+                return 0.00
+            })()
+        })
+    })
+
+    return list
+})()
+
+
+function updateCheckboxesID() {
+    let checkboxes = document.querySelectorAll('input')
+    for (let i = 0; i < checkboxes.length; i++) {
+        console.log('Verificação: ' + checkboxes[i].id + ' === ' + 'none')
+        console.log('Resultado foi: ' + checkboxes[i].id === 'none')
+        if (checkboxes[i].id === 'none') {
+            checkboxes[i].id = i
+        }
+    }
+}
+
+function setGroupID() {
+    let groups = document.querySelectorAll(".group-options")
+    for (let i = 0; i < groups.length; i++) {
+        groups[i].id = 'G'+ i
+    }
+}
+
+function setCheckboxesID() {
+    let checkboxes = document.querySelectorAll('input')
+    for (let i = 0; i < checkboxes.length; i++) {
+        checkboxesState[i].id = i
+        checkboxes[i].id = i
+        checkboxesState[i].name = checkboxes[i].parentNode.parentNode.children[0].innerHTML
+        checkboxesState[i].value = checkboxes[i].parentNode.parentNode.children[1].classList.contains('price') ? checkboxes[i].parentNode.parentNode.children[1] : 0.00
+    }
+}
+
+setGroupID()
+setCheckboxesID()
+
+function updateCheckboxesState() {
+    let AllCheckboxes = document.querySelectorAll(`input`)
+    checkboxesState.forEach(checkbox => {
+        AllCheckboxes.forEach(e => {
+            if (checkbox.id == e.id) {
+                e.checked = checkbox.state
+            }
+        })
+    })
+}
+
+
 function verificar(clicked) {
 
-    if (clicked.checked && clicked.value == 1) {
-        let value = parseFloat(clicked.previousElementSibling.innerHTML.split(' ')[1].replace(',', '.'))
+    let groupID = clicked.parentNode.parentNode.parentNode.parentNode.id
+    let maxOptions = clicked.parentNode.parentNode.parentNode.parentNode.children[0].children[1].innerHTML.split(' ')[4][0]
+    let checkboxArea = clicked.parentNode
+    let options = clicked.parentNode.parentNode.parentNode.children
 
-        valueOfOptions += value
-        updateSubTotal()
+    let AllCheckboxes = document.querySelectorAll(`input`)
+
+    if (clicked.checked === false) {
+
         
-    }
+        
 
-    if (clicked.checked == false && clicked.value == 1) {
-        let value = parseFloat(clicked.previousElementSibling.innerHTML.split(' ')[1].replace(',', '.'))
-
-        valueOfOptions -= value
-        updateSubTotal()
-    }
-
-    for (let i = 0; i < groupsElements.length; i++) {
-        var newGroup = groupsElements[i]
-        if ((function () {
-            for (let j = 0; j < newGroup.length; j++) {
-                if (newGroup[j].lastElementChild === clicked) {
-                    return true
-                }
+        AllCheckboxes.forEach(e => {
+            if (e.id == clicked.id) {
+                checkboxesState.forEach(checkbox => {
+                    if (clicked.id == checkbox.id) {
+                        checkbox.state = false
+                        let value = checkbox.value
+                        valueOfOptions -= value
+                        updateSubTotal()
+                    }
+                        
+                })
             }
-            return false
-        })()) {
-            var Marcados = 0;
-            var max = maxOptions[i].innerHTML[maxOptions[i].innerHTML.length - 2]
-            for (var iLoop = 0; iLoop < newGroup.length; iLoop++) {
-                //Se o número máximo de checkboxes ainda não tiver sido atingido, continua a verificação:
-                if (newGroup[iLoop].lastElementChild.checked) {
-                    Marcados++;
-                }
-                    
-                if (Marcados < max) {
-                //Habilitando todos os checkboxes, pois o máximo ainda não foi alcançado.
-                    for (var j = 0; j < newGroup.length; j++) {
-                        newGroup[j].lastElementChild.disabled = false;
-                    }
-                    //Caso contrário, desabilitar o checkbox;
-                    //Nesse caso, é necessário percorrer todas as opções novamente, desabilitando as não checadas;
-                    
-                } else {
-                    for (var k = 0; k < newGroup.length; k++) {
-                        if(newGroup[k].lastElementChild.checked == false) {
-                            newGroup[k].lastElementChild.disabled = true;
+        })
+
+        updateCheckboxesState()
+    }
+
+    if (clicked.checked) {
+        AllCheckboxes.forEach(e => {
+            if (e.id == clicked.id) {
+                checkboxesState.forEach(checkbox => {
+                    if (clicked.id == checkbox.id) {
+                        let value = checkbox.value
+                        valueOfOptions += value
+                        checkbox.state = true
+                        updateSubTotal()
+                    }   
+                })
+            }
+        })
+
+        if (maxOptions > 1) {
+            checkboxArea.innerHTML += `<input type="checkbox" id="${checkboxesState.length}" value="${clicked.value}" name="option 1" onchange="verificar(this)">`
+            checkboxesState.push({
+                id: checkboxesState.length, 
+                state: false,
+                value: (() => {
+                    let value = 0.00
+                    AllCheckboxes.forEach(e => {
+                        if (e.id == clicked.id) {
+                            checkboxesState.forEach(checkbox => {
+                                if (clicked.id == checkbox.id)
+                                    value = checkbox.value
+                            })
                         }
-                    }
-                }
+                    })
+                    return value
+                })(),
+                name: (() => {
+                    let name = ''
+                    AllCheckboxes.forEach(e => {
+                        if (e.id == clicked.id) {
+                            checkboxesState.forEach(checkbox => {
+                                if (clicked.id == checkbox.id)
+                                    name = checkbox.name
+                            })
+                        }
+                    })
+                    return name
+                })()
+            })
+        }
+
+        updateCheckboxesState()
+    }
+
+
+
+    let checkeds = 0
+
+    let checkboxes = document.querySelectorAll(`#${groupID} input`)
+
+    for (let i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+            checkeds++
+        }
+
+        if (checkeds < maxOptions) {
+            for (let j = 0; j < checkboxes.length; j++) {
+                checkboxes[j].disabled = false
+            }
+        } else {
+            for (let k = 0; k < checkboxes.length; k++) {
+                if (checkboxes[k].checked == false)
+                    checkboxes[k].disabled = true
             }
         }
     }
@@ -112,65 +210,145 @@ lessButton.addEventListener("click", () => {
 const backButton = document.querySelector('#back-button')
 backButton.addEventListener("click", () => window.history.back())
 
+function validaPedido() {
+    let groups = document.querySelectorAll('.group-options')
+    let groupsRequireds = [...groups].filter(group => group.children[0].children[1].classList.contains('required'))
+    
+    for (let i = 0; i < groupsRequireds.length; i++) {
+        let options = document.querySelectorAll(`#${groupsRequireds[i].id} input`)
+        let maxOptions = document.querySelector(`#${groupsRequireds[i].id} .maxOptions`).innerHTML.split(' ')[4][0]
+
+        let checkeds = 0
+        options.forEach(option => {
+            if (option.checked)
+                checkeds++
+        })
+
+        console.log('Checkeds: ' + checkeds)
+        if (checkeds < maxOptions) return false
+        
+    }
+    
+    return true
+}
+
 const buyButton = document.querySelector('#add-to-buy')
 buyButton.addEventListener("click", () => {
-    window.alert("Produto adicionado no carrinho!")
-    const groupsOptions = []
-    let params = (new URL(document.location)).searchParams;
-    let state = params.get("state");
+    if (validaPedido()) {
+            
+        window.alert("Produto adicionado no carrinho!")
+        const groupsOptions = []
+        let params = (new URL(document.location)).searchParams;
+        let state = params.get("state");
 
-    if (state === "aberto") {
+        if (state === "aberto") {
 
-        //params = (new URL(document.location)).searchParams;
-        //let restaurante = params.get("restaurante");
+            const complementsList = (() => {
 
-        for (let i = 0; i < groupsElements.length; i++) {
-            for (let j = 0; j < groupsElements[i].length; j++) {
-                if (groupsElements[i][j].lastElementChild.checked) {
-                    groupsOptions.push(Object.freeze({
-                        id_complemento: groupsOptions.length + 1,
-                        cod_complemento: parseInt(document.querySelectorAll('.cod_complemento')[i + j].innerHTML, 10),
-                        nome_complemento: groupsElements[i][j].children[0].innerHTML,
-                        vl_complemento: (() => {
-                            if (groupsElements[i][j].lastElementChild.previousElementSibling.innerHTML[1] === "$") {
-                                let el = groupsElements[i][j].lastElementChild.previousElementSibling.innerHTML
-                                el = el.split(' ')[1]
-                                el = el.replace(',', '.')
-                                el = parseFloat(el)
-                                return el
+                let list = []
+
+                checkboxesState.forEach(checkbox => {
+                    if (checkbox.state) {
+                        if ((() => {
+                            for (let i = 0; i < list.length; i++) {
+                                if (checkbox.name === list[i])
+                                    return false
                             }
-                            return 0.00
-                        })(),
-                        qtde_complemento: 1.00
-                    }))
-                }
+                            return true
+                        })()) {
+                            list.push(checkbox.name)
+                        }
+                    }
+                })
+
+                return list
+            })()
+
+            console.log(complementsList)
+
+            
+
+            for (let i = 0; i < complementsList.length; i++) {
+                groupsOptions.push(Object.freeze({
+                    id_complemento: groupsOptions.length + 1,
+                    cod_complemento: (() => {
+                        let list = document.querySelectorAll('.cod_complemento')
+                        let complemento = complementsList[i]
+
+                        for (let j = 0; j < list.length; j++) {
+                            if (list[j].innerHTML.split(':')[1] === complemento) {
+                                return parseInt(list[j].innerHTML.split(':')[0], 10)
+                            }
+                        }
+                        
+                    })(), //parseInt(document.querySelectorAll('.cod_complemento')[i + j].innerHTML, 10),
+                    nome_complemento: complementsList[i],
+                    vl_complemento: (() => {
+                        for (let j = 0; j < checkboxesState.length; j++) {
+                            if (checkboxesState[j].state && checkboxesState[j].name === complementsList[i]) {
+                                return checkboxesState[j].value
+                            }
+                        }
+                    })(),
+                    qtde_complemento: (() => {
+                        let qtde = 0
+                        for (let k = 0; k < checkboxesState.length; k++) {
+                            if (checkboxesState[k].state && checkboxesState[k].name === complementsList[i])
+                                qtde++
+                        }
+                        return qtde
+                    })()
+                }))
             }
-        }
 
-        if (sessionStorage.hasOwnProperty('pedido'))   {
+            console.log(groupsOptions)
 
-            if (JSON.parse(sessionStorage.pedido).restaurante === params.get('restaurante')) {
-                let pedido = JSON.parse(sessionStorage.getItem('pedido'))
-                pedido.pedido = [...pedido.pedido, Object.freeze({
-                    id_produto: pedido.pedido.length + 1,
-                    cod_produto: parseInt(document.querySelector('.cod_produto').innerHTML, 10),
-                    nome_produto: document.querySelector("h1").innerHTML,
-                    complementos: groupsOptions,
-                    obs: document.querySelector('textarea').value,
-                    vl_unitario: parseFloat(document.querySelector('.principal-price').innerHTML.replace(',', '.')),
-                    vl_total: parseFloat(document.querySelector("#subTotal").innerHTML.replace(',', '.')),
-                    qtde: parseFloat(quantityText.innerHTML),
-                    tipo_pizza: false,
-                    id_pizza: 0,
-                    promocao: false,
-                    unidade: document.querySelector('.unidade').innerHTML,
-                    codigo_pesquisa: document.querySelector(".cod_pesquisa").innerHTML,
-                    cod_grupo: parseInt(document.querySelector('.cod_grupo').innerHTML, 10)
-                })]
-                sessionStorage.setItem('pedido', JSON.stringify(pedido))
-                console.log('adicionou outro produto')
+            if (sessionStorage.hasOwnProperty('pedido'))   {
 
-            } else {
+                if (JSON.parse(sessionStorage.pedido).restaurante === params.get('restaurante')) {
+                    let pedido = JSON.parse(sessionStorage.getItem('pedido'))
+                    pedido.pedido = [...pedido.pedido, Object.freeze({
+                        id_produto: pedido.pedido.length + 1,
+                        cod_produto: parseInt(document.querySelector('.cod_produto').innerHTML, 10),
+                        nome_produto: document.querySelector("h1").innerHTML,
+                        complementos: groupsOptions,
+                        obs: document.querySelector('textarea').value,
+                        vl_unitario: parseFloat(document.querySelector('.principal-price').innerHTML.replace(',', '.')),
+                        vl_total: parseFloat(document.querySelector("#subTotal").innerHTML.replace(',', '.')),
+                        qtde: parseFloat(quantityText.innerHTML),
+                        tipo_pizza: false,
+                        id_pizza: 0,
+                        promocao: false,
+                        unidade: document.querySelector('.unidade').innerHTML,
+                        codigo_pesquisa: document.querySelector(".cod_pesquisa").innerHTML,
+                        cod_grupo: parseInt(document.querySelector('.cod_grupo').innerHTML, 10)
+                    })]
+                    sessionStorage.setItem('pedido', JSON.stringify(pedido))
+                    console.log('adicionou outro produto')
+
+                } else {
+                    produto = [Object.freeze({
+                        id_produto: 1,
+                        cod_produto: parseInt(document.querySelector('.cod_produto').innerHTML, 10),
+                        nome_produto: document.querySelector("h1").innerHTML,
+                        complementos: groupsOptions,
+                        obs: document.querySelector('textarea').value,
+                        vl_unitario: parseFloat(document.querySelector('.principal-price').innerHTML.replace(',', '.')),
+                        vl_total: parseFloat(document.querySelector("#subTotal").innerHTML.replace(',', '.')),
+                        qtde: parseFloat(quantityText.innerHTML),
+                        tipo_pizza: false,
+                        id_pizza: 0,
+                        promocao: false,
+                        unidade: document.querySelector('.unidade').innerHTML,
+                        codigo_pesquisa: document.querySelector(".cod_pesquisa").innerHTML,
+                        cod_grupo: parseInt(document.querySelector('.cod_grupo').innerHTML, 10)
+                    })]
+                    sessionStorage.setItem('pedido', JSON.stringify({restaurante: params.get("restaurante"), pedido: produto}))
+                    console.log('adicionou um produto pela primeira vez')
+                }
+
+            }
+            else {
                 produto = [Object.freeze({
                     id_produto: 1,
                     cod_produto: parseInt(document.querySelector('.cod_produto').innerHTML, 10),
@@ -190,31 +368,13 @@ buyButton.addEventListener("click", () => {
                 sessionStorage.setItem('pedido', JSON.stringify({restaurante: params.get("restaurante"), pedido: produto}))
                 console.log('adicionou um produto pela primeira vez')
             }
+        } else {
+            window.alert("Restaurante está fechado!")
+        }
 
-        }
-        else {
-            produto = [Object.freeze({
-                id_produto: 1,
-                cod_produto: parseInt(document.querySelector('.cod_produto').innerHTML, 10),
-                nome_produto: document.querySelector("h1").innerHTML,
-                complementos: groupsOptions,
-                obs: document.querySelector('textarea').value,
-                vl_unitario: parseFloat(document.querySelector('.principal-price').innerHTML.replace(',', '.')),
-                vl_total: parseFloat(document.querySelector("#subTotal").innerHTML.replace(',', '.')),
-                qtde: parseFloat(quantityText.innerHTML),
-                tipo_pizza: false,
-                id_pizza: 0,
-                promocao: false,
-                unidade: document.querySelector('.unidade').innerHTML,
-                codigo_pesquisa: document.querySelector(".cod_pesquisa").innerHTML,
-                cod_grupo: parseInt(document.querySelector('.cod_grupo').innerHTML, 10)
-            })]
-            sessionStorage.setItem('pedido', JSON.stringify({restaurante: params.get("restaurante"), pedido: produto}))
-            console.log('adicionou um produto pela primeira vez')
-        }
-    } else {
-        window.alert("Restaurante está fechado!")
+        window.history.back();
     }
-
-    window.history.back();
+    else {
+        alert("Preencha o(s) campo(s) obrigatório(s)!")
+    }
 })

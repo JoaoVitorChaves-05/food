@@ -105,7 +105,7 @@ confirmButton.addEventListener("click", async () => {
                 message += 'Obs: ' + pedido[i].obs + '%0A'
                 message += 'Complementos:%0A'
                 for (let j = 0; j < pedido[i].complementos.length; j++) {
-                    message += '- ' + pedido[i].complementos[j].nome_complemento + ' R$ ' + pedido[i].complementos[j].vl_complemento.toFixed(2).replace('.', ',') + '%0A'
+                    message += '- ' + pedido[i].complementos[j].nome_complemento + ' R$ ' + pedido[i].complementos[j].vl_complemento.toFixed(2).replace('.', ',') + ' x ' + pedido[i].complementos[j].qtde_complemento + '%0A'
                 }
                 message += 'Subtotal: R$ ' + pedido[i].vl_total.toFixed(2).replace('.', ',')
                 message += '%0A%0A'
