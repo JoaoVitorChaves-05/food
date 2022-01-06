@@ -21,7 +21,7 @@ const checkboxesState = (() => {
             state: e.checked,
             value: (() => {
                 if (e.parentNode.parentNode.children[1].classList.contains('price')) {
-                    return parseFloat(e.parentNode.prepreviousElementSibling.innerHTML.split(' ')[1].replace(',', '.'))
+                    return parseFloat(e.parentNode.parentNode.children[1].innerHTML.split(' ')[1].replace(',', '.'))
                 }
                 return 0.00
             })()
@@ -30,18 +30,6 @@ const checkboxesState = (() => {
 
     return list
 })()
-
-
-function updateCheckboxesID() {
-    let checkboxes = document.querySelectorAll('input')
-    for (let i = 0; i < checkboxes.length; i++) {
-        console.log('Verificação: ' + checkboxes[i].id + ' === ' + 'none')
-        console.log('Resultado foi: ' + checkboxes[i].id === 'none')
-        if (checkboxes[i].id === 'none') {
-            checkboxes[i].id = i
-        }
-    }
-}
 
 function setGroupID() {
     let groups = document.querySelectorAll(".group-options")

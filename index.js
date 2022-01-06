@@ -124,11 +124,13 @@ app.get('/:restaurante/pedido', async (req, res) => {
             }
         })
 
+        /*
         produtoSelecionado.grupoComplemento.forEach(grupoComplemento => {
             grupoComplemento.opcoes.forEach(opcao => {
                 opcao = {...opcao, MaximoComplemento: 2}
             })
         })
+        */
 
         console.log(Object.keys(produtoSelecionado))
         console.log(produtoSelecionado.grupoComplemento)
