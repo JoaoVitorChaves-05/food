@@ -2,7 +2,7 @@ let valueOfOptions = 0.00
 const initialValue = document.querySelector(".principal-price")
 let unities = parseFloat(document.querySelector('#quantity').innerHTML)
 
-let subTotal = (parseFloat(initialValue.innerHTML) + valueOfOptions) * unities
+let subTotal = (parseFloat(initialValue.innerHTML.replace(',', '.')) + valueOfOptions) * unities
 
 function updateSubTotal() {
     subTotal = (parseFloat(initialValue.innerHTML.replace(',', '.')) + valueOfOptions) * unities
@@ -44,7 +44,7 @@ function setCheckboxesID() {
         checkboxesState[i].id = i
         checkboxes[i].id = i
         checkboxesState[i].name = checkboxes[i].parentNode.parentNode.children[0].innerHTML
-        checkboxesState[i].value = checkboxes[i].parentNode.parentNode.children[1].classList.contains('price') ? checkboxes[i].parentNode.parentNode.children[1] : 0.00
+        checkboxesState[i].value = checkboxes[i].parentNode.parentNode.children[1].classList.contains('price') ? parseFloat(checkboxes[i].parentNode.parentNode.children[1].innerHTML.split(' ')[1].replace(',', '.')) : 0.00
     }
 }
 
@@ -66,16 +66,13 @@ function updateCheckboxesState() {
 function verificar(clicked) {
 
     let groupID = clicked.parentNode.parentNode.parentNode.parentNode.id
-    let maxOptions = clicked.parentNode.parentNode.parentNode.parentNode.children[0].children[1].innerHTML.split(' ')[4][0]
+    let maxOptions = clicked.parentNode.parentNode.parentNode.parentNode.children[0].children[2].innerHTML.split(' ')[4][0]
     let checkboxArea = clicked.parentNode
     let options = clicked.parentNode.parentNode.parentNode.children
 
     let AllCheckboxes = document.querySelectorAll(`input`)
 
     if (clicked.checked === false) {
-
-        
-        
 
         AllCheckboxes.forEach(e => {
             if (e.id == clicked.id) {
@@ -200,11 +197,11 @@ backButton.addEventListener("click", () => window.history.back())
 
 function validaPedido() {
     let groups = document.querySelectorAll('.group-options')
-    let groupsRequireds = [...groups].filter(group => group.children[0].children[1].classList.contains('required'))
+    let groupsRequireds = [...groups].filter(group => group.children[0].children[2].classList.contains('required'))
     
     for (let i = 0; i < groupsRequireds.length; i++) {
         let options = document.querySelectorAll(`#${groupsRequireds[i].id} input`)
-        let maxOptions = document.querySelector(`#${groupsRequireds[i].id} .maxOptions`).innerHTML.split(' ')[4][0]
+        let minOptions = document.querySelector(`#${groupsRequireds[i].id} .minimoComplemento`).innerHTML
 
         let checkeds = 0
         options.forEach(option => {
@@ -212,9 +209,7 @@ function validaPedido() {
                 checkeds++
         })
 
-        console.log('Checkeds: ' + checkeds)
-        if (checkeds < maxOptions) return false
-        
+        if (checkeds < minOptions) return false
     }
     
     return true
