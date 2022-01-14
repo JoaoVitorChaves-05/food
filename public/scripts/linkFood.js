@@ -81,6 +81,9 @@ confirmButton.addEventListener("click", async () => {
                 await fetch('/api/send?pedido=' + encodeURIComponent(JSON.stringify(info)) + '&restaurante=' + encodeURIComponent(window.location.pathname.replace('/', '')))
                 .then((response) => response.text())
                 .then((response) => numeroPedido = response)
+                .catch((error) => console.log(error))
+
+                console.log('numero do pedido: ' + numeroPedido)
     
                 let message = ``
     
@@ -117,7 +120,7 @@ confirmButton.addEventListener("click", async () => {
                 message += '%0A'
                 message += '*ATENÇÃO*%0A'
                 message += 'Aguarde a confirmação do estabelecimento e o cálculo do frete'
-                window.location.href = "https://wa.me/5512997932718?text=" + message
+                // window.location.href = "https://wa.me/5512997932718?text=" + message
             } else {
                 info[0] = {
                     ...info[0],

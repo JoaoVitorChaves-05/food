@@ -219,13 +219,13 @@ const buyButton = document.querySelector('#add-to-buy')
 buyButton.addEventListener("click", () => {
     if (validaPedido()) {
             
-        window.alert("Produto adicionado no carrinho!")
         const groupsOptions = []
         let params = (new URL(document.location)).searchParams;
         let state = params.get("state");
 
         if (state === "aberto") {
 
+            window.alert("Produto adicionado no carrinho!")
             const complementsList = (() => {
 
                 let list = []
@@ -293,7 +293,7 @@ buyButton.addEventListener("click", () => {
                     pedido.pedido = [...pedido.pedido, Object.freeze({
                         id_produto: pedido.pedido.length + 1,
                         cod_produto: parseInt(document.querySelector('.cod_produto').innerHTML, 10),
-                        nome_produto: document.querySelector("h1").innerHTML,
+                        nome_produto: document.querySelector("#nome_produto").innerHTML,
                         complementos: groupsOptions,
                         obs: document.querySelector('textarea').value,
                         vl_unitario: parseFloat(document.querySelector('.principal-price').innerHTML.replace(',', '.')),
@@ -313,7 +313,7 @@ buyButton.addEventListener("click", () => {
                     produto = [Object.freeze({
                         id_produto: 1,
                         cod_produto: parseInt(document.querySelector('.cod_produto').innerHTML, 10),
-                        nome_produto: document.querySelector("h1").innerHTML,
+                        nome_produto: document.querySelector("#nome_produto").innerHTML,
                         complementos: groupsOptions,
                         obs: document.querySelector('textarea').value,
                         vl_unitario: parseFloat(document.querySelector('.principal-price').innerHTML.replace(',', '.')),
@@ -335,7 +335,7 @@ buyButton.addEventListener("click", () => {
                 produto = [Object.freeze({
                     id_produto: 1,
                     cod_produto: parseInt(document.querySelector('.cod_produto').innerHTML, 10),
-                    nome_produto: document.querySelector("h1").innerHTML,
+                    nome_produto: document.querySelector("#nome_produto").innerHTML,
                     complementos: groupsOptions,
                     obs: document.querySelector('textarea').value,
                     vl_unitario: parseFloat(document.querySelector('.principal-price').innerHTML.replace(',', '.')),

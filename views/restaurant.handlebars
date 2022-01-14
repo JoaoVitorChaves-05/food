@@ -1,9 +1,16 @@
 <link rel="stylesheet" href="/styles/restaurant.css">
 <nav>
     <div class="logo-restaurant">
-        <img width="100px" height="100px"src="/images/hamburguer-de-queijo.png" alt="Logo do restaurante">
+        <img width="100px" height="100px" src={{foto}} alt="Logo do restaurante">
         <h1 id="title">{{restaurante}}</h1>
         <h2 style="font-size: medium;">Restaurante está: <span id="state">{{state}}</span></h2>
+        <hr>
+        <div class="info-item">
+            <p>Telefone: {{telefone}}</p>
+        </div>
+        <div class="info-item">
+            <p>{{endereco}}</p>
+        </div>
     </div>
     {{#if adicionado}}
     <div class="product-added">
@@ -91,16 +98,6 @@
         {{/each}}
         <div style="display: none" id="tel">
         {{telefone}}
-        </div>
-    </div>
-    <div class="group-info">
-        <div class="menu-info">
-            <div class="info-item">
-                <p>Telefone: {{telefone}}</p>
-            </div>
-            <div class="info-item">
-                <p>{{endereco}}</p>
-            </div>
         </div>
     </div>
     <div class="carrinho">

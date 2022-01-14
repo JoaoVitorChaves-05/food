@@ -58,6 +58,11 @@ nav {
     padding: 10px;
 }
 
+.logo-restaurant hr {
+    width: 90%;
+    margin-bottom: 10px;
+}
+
 .logo-restaurant h1 {
     font-size: 1.2em;
     padding-left: 10px;

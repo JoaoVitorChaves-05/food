@@ -1,8 +1,13 @@
 <link rel="stylesheet" href="/styles/pedido.css" type="text/css">
+{{#if temPromocao}}
+<header class="header">
+    <h1>Promoção</h1>
+</header>
+{{/if}}
 <main>
     <div class="pedido">
         <div class="info-main"> 
-            <h1>{{produtoSelecionado.nome_produto}}</h1>
+            <h1 id="nome_produto">{{produtoSelecionado.nome_produto}}</h1>
             <img src="/images/hamburguer-de-queijo.png" alt="Foto do pedido" width="150px" height="150px">
             <div class="info-food">
                 <p>{{produtoSelecionado.descricao}}</p>

@@ -15,7 +15,7 @@ app.set("views", "./views");
 const PORT = process.env.PORT || 3000
 
 app.get('/', async (req, res) => {
-    const restaurantes = await fetch('https://2108-187-121-39-2.ngrok.io/api/restaurantes/123')
+    const restaurantes = await fetch('https://b0b8-177-62-248-18.ngrok.io/api/restaurantes/123')
     .then((response) => response.json())
     .then(data => data)
     .catch(err => console.log(err))
@@ -29,20 +29,28 @@ app.get('/:restaurante', async function(req, res) {
     const {restaurante} = req.params
     const {adicionado} = req.query
 
-    const chave = await fetch(`https://2108-187-121-39-2.ngrok.io/api/aberto/${restaurante}`)
+    let chave
+    let state
+
+    await fetch(`https://b0b8-177-62-248-18.ngrok.io/api/aberto/${restaurante}`)
     .then(response => response.text())
     .then(response => {
+        chave = response.split(';')[0]
+        state = response.split(';')[1]
+        /*
         if (response.message) {
             res.send('<h1>Restaurante fechado!</h1>')
             return
         }
         return response
+        */
     })
     .catch(err => console.log(err))
 
     console.log('Chave: ' + chave)
+    console.log('State: ' + state)
 
-    let restaurantes = await fetch(`https://2108-187-121-39-2.ngrok.io/api/restaurantes/123`)
+    let restaurantes = await fetch(`https://b0b8-177-62-248-18.ngrok.io/api/restaurantes/123`)
     .then(response => response.json())
     .then(response => response)
     .catch(err => console.log(err))
@@ -52,7 +60,7 @@ app.get('/:restaurante', async function(req, res) {
     restaurantes.forEach(async (e) => {
         if (restaurante === e.RestauranteApelido) {
             //infoRestaurante = await fetch(`https://bb4f-200-170-124-158.ngrok.io/api/menu/${restaurante}/123`)
-            await fetch(`https://2108-187-121-39-2.ngrok.io/api/menu/${restaurante}/${chave}`)
+            await fetch(`https://b0b8-177-62-248-18.ngrok.io/api/menu/${restaurante}/${chave}`)
             .then(response => response.json())
             .then(response => {
 
@@ -65,12 +73,12 @@ app.get('/:restaurante', async function(req, res) {
                 let podeDelivery = infoRestaurante[0].PossuiDelivery
                 let podeRetirar = infoRestaurante[0].PossuiRetira
                 let formasPagamento = infoRestaurante[0].FormasPagamento.split(';')
-
+                let foto = infoRestaurante[0].Foto
 
                 res.render('restaurant', {
                     grupos: infoRestaurante[0].grupos,
                     restaurante: infoRestaurante[0].NomeRestaurante,
-                    state: infoRestaurante[0].RestauranteAberto ? "aberto": "fechado",
+                    state: state === 'ABERTO' ? "aberto": "fechado",
                     endereco: endereco,
                     telefone: telefone,
                     mensagemDestaque: 'Hoje não temos o delivery',
@@ -79,6 +87,7 @@ app.get('/:restaurante', async function(req, res) {
                     podeRetirar: podeRetirar === 'true' ? true : false,
                     formasPagamento: formasPagamento,
                     adicionado: adicionado,
+                    foto: foto
                 })
             })
             .catch(err => console.log(err))
@@ -92,13 +101,20 @@ app.get('/:restaurante/pedido', async (req, res) => {
     console.log(elemento)
     let produtos = []
 
-    const chave = await fetch(`https://2108-187-121-39-2.ngrok.io/api/aberto/${restaurante}`)
+    let chave
+    let state
+
+    await fetch(`https://b0b8-177-62-248-18.ngrok.io/api/aberto/${restaurante}`)
     .then(response => response.text())
-    .then(response => response)
+    .then(response => {
+        chave = response.split(';')[0]
+        state = response.split(';')[1]
+    })
     .catch(err => console.log(err))
+
     console.log(chave)
 
-    await fetch(`https://2108-187-121-39-2.ngrok.io/api/menu/${restaurante}/${chave}`)
+    await fetch(`https://b0b8-177-62-248-18.ngrok.io/api/menu/${restaurante}/${chave}`)
     .then(response => response.json())
     .then(data => {
         produtos = data
@@ -111,7 +127,7 @@ app.get('/:restaurante/pedido', async (req, res) => {
                 grupo.produtos_em_promocao.forEach(produto => {
                     if (produto.nome_produto === elemento ) {
                         produtoSelecionado = {...produto}
-                        promocao = produto.promocao === 'N' ? false : true
+                        promocao = produto.promocao === 'false' ? false : true
                     }
                 })
             } else {
@@ -119,21 +135,14 @@ app.get('/:restaurante/pedido', async (req, res) => {
                     if (produto.nome_produto === elemento ) {
                         produtoSelecionado = {...produto}
                         console.log(produtoSelecionado)
-                        promocao = produto.promocao === 'N' ? false : true
+                        promocao = produto.promocao === 'false' ? false : true
                     }
                 })
             }
         })
 
-        /*
-        produtoSelecionado.grupoComplemento.forEach(grupoComplemento => {
-            grupoComplemento.opcoes.forEach(opcao => {
-                opcao = {...opcao, MaximoComplemento: 2}
-            })
-        })
-        */
-
         console.log(Object.keys(produtoSelecionado))
+        console.log(produtoSelecionado)
         console.log(produtoSelecionado.grupoComplemento)
 
         res.render('food', {
@@ -148,13 +157,13 @@ app.get('/:restaurante/pedido', async (req, res) => {
 app.get('/api/restaurante', async (req, res) => {
     const {restaurante} = req.query
 
-    let restaurantes = await fetch('https://2108-187-121-39-2.ngrok.io/api/restaurantes/123')
+    let restaurantes = await fetch('https://b0b8-177-62-248-18.ngrok.io/api/restaurantes/123')
     .then(response => response.json())
     .then(response => response)
 
     restaurantes.forEach(async (e) => {
         if (restaurante === e.RestauranteApelido) {
-            await fetch(`https://2108-187-121-39-2.ngrok.io/api/menu/${restaurante}/chave`)
+            await fetch(`https://b0b8-177-62-248-18.ngrok.io/api/menu/${restaurante}/chave`)
             .then(response => response.json())
             .then(response => res.send(response))
             .catch(err => console.log(err))
@@ -163,7 +172,7 @@ app.get('/api/restaurante', async (req, res) => {
 })
 
 app.get('/api/restaurantes', async (req, res) => {
-    await fetch('https://2108-187-121-39-2.ngrok.io/api/restaurantes/123')
+    await fetch('https://b0b8-177-62-248-18.ngrok.io/api/restaurantes/123')
     .then(response => response.json())
     .then(response => res.send(response))
 })
@@ -172,15 +181,21 @@ app.get('/api/send', async (req, res) => {
     const {pedido} = req.query
     const {restaurante} = req.query
 
-    const chave = await fetch(`https://2108-187-121-39-2.ngrok.io/api/aberto/${restaurante}`)
+    let chave
+    let state
+
+    await fetch(`https://b0b8-177-62-248-18.ngrok.io/api/aberto/${restaurante}`)
     .then(response => response.text())
-    .then(response => response)
+    .then(response => {
+        chave = response.split(';')[0]
+        state = response.split(';')[1]
+    })
     .catch(err => console.log(err))
 
 
     let pedidoEncoded = encodeURIComponent(pedido)
     console.log(pedidoEncoded)
-    await fetch(`https://2108-187-121-39-2.ngrok.io/api/pedido/${restaurante}/${chave}/${pedidoEncoded}`)
+    await fetch(`https://b0b8-177-62-248-18.ngrok.io/api/pedido/${restaurante}/${chave}/${pedidoEncoded}`)
     .then(res => res.text())
     .then(response => res.send(response))
     .catch(er => console.log(er))
