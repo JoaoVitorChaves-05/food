@@ -22,6 +22,10 @@ app.get('/', async (req, res) => {
     .then(data => data)
     .catch(err => console.log(err))
 
+    restaurantes.forEach((restaurante) => {
+        restaurante.Foto = restaurante.Foto.replace('http', 'https')
+    })
+
     res.render('home', {
         restaurantes: restaurantes
     })
@@ -89,7 +93,7 @@ app.get('/:restaurante', async function(req, res) {
                     podeRetirar: podeRetirar === 'true' ? true : false,
                     formasPagamento: formasPagamento,
                     adicionado: adicionado,
-                    foto: foto
+                    foto: foto.replace('http', 'https')
                 })
             })
             .catch(err => console.log(err))
