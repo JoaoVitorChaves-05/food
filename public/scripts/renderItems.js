@@ -146,7 +146,7 @@ const setForm = (type) => {
         <input placeholder="Insira seu nome" type="text" name="Nome" id="name">
         <input placeholder="Insira seu telefone (com DDD)" type="tel" name="Celular" id="Celular">
         <div class="cep-numberHouse">
-            <input placeholder="CEP" type="number" name="CEP" id="cep">
+            <input placeholder="CEP" onchange="checkCEP()" type="number" name="CEP" id="cep">
             <input placeholder="Número do endereço" type="number" name="Número do endereço" id="numberHouse">
         </div>
         <input placeholder="Endereço" type="text" name="Endereço" id="address">
@@ -156,7 +156,7 @@ const setForm = (type) => {
         </div>
         <div class="city-state">
             <input placeholder="Cidade" type="text" name="Cidade" id="city">
-            <input placeholder="Estado" type="text" name="Estado" id="state">    
+            <input placeholder="Estado" type="text" name="Estado" id="uf">    
         </div>
         <select name="Pagamento" id="payment">
             <optgroup>
@@ -209,3 +209,32 @@ getFood.addEventListener('click', () => {
     getFood.classList.add("active-button")
     setForm(requestType)
 })
+
+const checkCEP = async () => {
+    const cep = document.querySelector('#cep').value
+
+    if (cep.length == 8) {
+        for (let char = 0; char < cep.length; char++) {
+            if (!(() => cep[char] >= '0' && cep[char] <= '9')()) {
+                return
+            }
+        }
+
+        const info = await fetch(`https://viacep.com.br/ws/${cep}/json/`)
+        .then(response => response.json())
+        .then(response => response)
+
+        console.log(info)
+
+        const endereco = document.querySelector('#address')
+        const bairro = document.querySelector('#neighbor')
+        const cidade = document.querySelector('#city')
+        const estado = document.querySelector('#uf')
+
+        endereco.value = info.logradouro
+        bairro.value = info.bairro
+        cidade.value = info.localidade
+        estado.value = info.uf
+    }
+    
+}

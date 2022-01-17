@@ -14,8 +14,10 @@ app.set("views", "./views");
 
 const PORT = process.env.PORT || 3000
 
+const API = 'https://6419-177-62-248-18.ngrok.io'
+
 app.get('/', async (req, res) => {
-    const restaurantes = await fetch('https://b0b8-177-62-248-18.ngrok.io/api/restaurantes/123')
+    const restaurantes = await fetch(`${API}/api/restaurantes/123`)
     .then((response) => response.json())
     .then(data => data)
     .catch(err => console.log(err))
@@ -32,7 +34,7 @@ app.get('/:restaurante', async function(req, res) {
     let chave
     let state
 
-    await fetch(`https://b0b8-177-62-248-18.ngrok.io/api/aberto/${restaurante}`)
+    await fetch(`${API}/api/aberto/${restaurante}`)
     .then(response => response.text())
     .then(response => {
         chave = response.split(';')[0]
@@ -50,7 +52,7 @@ app.get('/:restaurante', async function(req, res) {
     console.log('Chave: ' + chave)
     console.log('State: ' + state)
 
-    let restaurantes = await fetch(`https://b0b8-177-62-248-18.ngrok.io/api/restaurantes/123`)
+    let restaurantes = await fetch(`${API}/api/restaurantes/123`)
     .then(response => response.json())
     .then(response => response)
     .catch(err => console.log(err))
@@ -60,7 +62,7 @@ app.get('/:restaurante', async function(req, res) {
     restaurantes.forEach(async (e) => {
         if (restaurante === e.RestauranteApelido) {
             //infoRestaurante = await fetch(`https://bb4f-200-170-124-158.ngrok.io/api/menu/${restaurante}/123`)
-            await fetch(`https://b0b8-177-62-248-18.ngrok.io/api/menu/${restaurante}/${chave}`)
+            await fetch(`${API}/api/menu/${restaurante}/${chave}`)
             .then(response => response.json())
             .then(response => {
 
@@ -104,7 +106,7 @@ app.get('/:restaurante/pedido', async (req, res) => {
     let chave
     let state
 
-    await fetch(`https://b0b8-177-62-248-18.ngrok.io/api/aberto/${restaurante}`)
+    await fetch(`${API}/api/aberto/${restaurante}`)
     .then(response => response.text())
     .then(response => {
         chave = response.split(';')[0]
@@ -114,7 +116,7 @@ app.get('/:restaurante/pedido', async (req, res) => {
 
     console.log(chave)
 
-    await fetch(`https://b0b8-177-62-248-18.ngrok.io/api/menu/${restaurante}/${chave}`)
+    await fetch(`${API}/api/menu/${restaurante}/${chave}`)
     .then(response => response.json())
     .then(data => {
         produtos = data
@@ -157,13 +159,13 @@ app.get('/:restaurante/pedido', async (req, res) => {
 app.get('/api/restaurante', async (req, res) => {
     const {restaurante} = req.query
 
-    let restaurantes = await fetch('https://b0b8-177-62-248-18.ngrok.io/api/restaurantes/123')
+    let restaurantes = await fetch(`${API}/api/restaurantes/123`)
     .then(response => response.json())
     .then(response => response)
 
     restaurantes.forEach(async (e) => {
         if (restaurante === e.RestauranteApelido) {
-            await fetch(`https://b0b8-177-62-248-18.ngrok.io/api/menu/${restaurante}/chave`)
+            await fetch(`${API}/api/menu/${restaurante}/chave`)
             .then(response => response.json())
             .then(response => res.send(response))
             .catch(err => console.log(err))
@@ -172,7 +174,7 @@ app.get('/api/restaurante', async (req, res) => {
 })
 
 app.get('/api/restaurantes', async (req, res) => {
-    await fetch('https://b0b8-177-62-248-18.ngrok.io/api/restaurantes/123')
+    await fetch(`${API}/api/restaurantes/123`)
     .then(response => response.json())
     .then(response => res.send(response))
 })
@@ -184,7 +186,7 @@ app.get('/api/send', async (req, res) => {
     let chave
     let state
 
-    await fetch(`https://b0b8-177-62-248-18.ngrok.io/api/aberto/${restaurante}`)
+    await fetch(`${API}/api/aberto/${restaurante}`)
     .then(response => response.text())
     .then(response => {
         chave = response.split(';')[0]
@@ -195,7 +197,7 @@ app.get('/api/send', async (req, res) => {
 
     let pedidoEncoded = encodeURIComponent(pedido)
     console.log(pedidoEncoded)
-    await fetch(`https://b0b8-177-62-248-18.ngrok.io/api/pedido/${restaurante}/${chave}/${pedidoEncoded}`)
+    await fetch(`${API}/api/pedido/${restaurante}/${chave}/${pedidoEncoded}`)
     .then(res => res.text())
     .then(response => res.send(response))
     .catch(er => console.log(er))
