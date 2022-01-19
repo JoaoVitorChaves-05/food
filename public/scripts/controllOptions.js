@@ -299,7 +299,7 @@ buyButton.addEventListener("click", () => {
                         vl_unitario: parseFloat(document.querySelector('.principal-price').innerHTML.replace(',', '.')),
                         vl_total: parseFloat(document.querySelector("#subTotal").innerHTML.replace(',', '.')),
                         qtde: parseFloat(quantityText.innerHTML),
-                        tipo_pizza: false,
+                        tipo_pizza: document.querySelector(".tipo_pizza").innerHTML === 'true' ? true : false,
                         id_pizza: 0,
                         promocao: document.querySelector(".promocao").innerHTML === 'true' ? true : false,
                         unidade: document.querySelector('.unidade').innerHTML,
