@@ -87,9 +87,14 @@ const deleteItem = (item) => {
     const buttonsArray = []
     buttons.forEach(e => buttonsArray.push(e))
 
-    const index = buttonsArray.indexOf(item)
+    const indexButton = buttonsArray.indexOf(item)
 
-    delete items[index]
+    items = items.filter((item, index) => index !== indexButton)
+
+    for (let i = 0; i < items.length; i++) {
+        items[i].id_produto = i + 1
+    }
+
     sessionStorage.setItem('pedido', JSON.stringify({restaurante: window.location.pathname.replace('/', ''), pedido: items}))
     renderItems()
 }

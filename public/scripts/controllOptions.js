@@ -301,7 +301,7 @@ buyButton.addEventListener("click", () => {
                         qtde: parseFloat(quantityText.innerHTML),
                         tipo_pizza: false,
                         id_pizza: 0,
-                        promocao: false,
+                        promocao: document.querySelector(".promocao").innerHTML === 'true' ? true : false,
                         unidade: document.querySelector('.unidade').innerHTML,
                         codigo_pesquisa: document.querySelector(".cod_pesquisa").innerHTML,
                         cod_grupo: parseInt(document.querySelector('.cod_grupo').innerHTML, 10)
