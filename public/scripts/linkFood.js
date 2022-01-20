@@ -6,31 +6,62 @@ items.forEach(e => e.addEventListener("click", () => {
     window.location.href += `/pedido?state=${state.innerHTML}` + "&elemento=" + encodeURIComponent(produto.innerHTML) + "&restaurante=" + window.location.href.split('/')[window.location.href.split('/').length - 1]
 }))
 
-const validateForm = () => {
+const validateForm = (type) => {
     let inputs = document.forms["userInfo"]
-    for (let i = 0; i < inputs.length; i++) {
-        console.log(inputs[i])
-        if (inputs[i].value === "" && i !== 6) {
-            alert("Ainda faltam dados!")
-            return false
-        }
-        if (i === 9) {
-            const selected = (() => {
-                for ( var i = 0 ; i < inputs[9].length; i++ ) {
-                    opt = inputs[9][i];
-                    if (opt.selected === true) {
-                        break;
-                    }
-                }
-                return opt;
-            })()
-            console.log(selected)
-            console.log(typeof selected.value)
-            if (selected.value != 'null') {
-                return true;
-            } else {
+
+    if (type === "E"){
+        for (let i = 0; i < inputs.length; i++) {
+            console.log(inputs[i])
+            if (inputs[i].value === "" && i !== 6) {
                 alert("Ainda faltam dados!")
                 return false
+            }
+            if (i === 9) {
+                const selected = (() => {
+                    for ( var i = 0 ; i < inputs[9].length; i++ ) {
+                        opt = inputs[9][i];
+                        if (opt.selected === true) {
+                            break;
+                        }
+                    }
+                    return opt;
+                })()
+                console.log(selected)
+                console.log(typeof selected.value)
+                if (selected.value != 'null') {
+                    return true;
+                } else {
+                    alert("Ainda faltam dados!")
+                    return false
+                }
+            }
+        }
+    }
+    else {
+        for (let i = 0; i < inputs.length; i++) {
+            console.log(inputs[i])
+            if (inputs[i].value === "" && i !== 6) {
+                alert("Ainda faltam dados!")
+                return false
+            }
+            if (i === 2) {
+                const selected = (() => {
+                    for ( var i = 0 ; i < inputs[2].length; i++ ) {
+                        opt = inputs[2][i];
+                        if (opt.selected === true) {
+                            break;
+                        }
+                    }
+                    return opt;
+                })()
+                console.log(selected)
+                console.log(typeof selected.value)
+                if (selected.value != 'null') {
+                    return true;
+                } else {
+                    alert("Ainda faltam dados!")
+                    return false
+                }
             }
         }
     }
@@ -41,8 +72,14 @@ backButton.addEventListener("click", () => window.history.back())
 
 const confirmButton = document.querySelector(".confirm-button")
 confirmButton.addEventListener("click", async () => {
+
+    let type
+    if (document.querySelector('.active-button').lastElementChild.innerHTML === 'Delivery')
+        type = 'E'
+    else
+        type = 'R'
     
-    if (!validateForm())
+    if (!validateForm(type))
         return 
 
     const state = document.querySelector("#state")
@@ -171,6 +208,15 @@ confirmButton.addEventListener("click", async () => {
                         })
                         return value
                     })(),
+                    forma_pagamento: (() => {
+                        for ( var i = 0 ; i < form[2].length; i++ ) {
+                            let opt = form[2][i];
+                            if (opt.selected === true) {
+                                break;
+                            }
+                        }
+                        return opt.value;
+                    })(),
                     produtos: pedido
                 }
 
@@ -179,13 +225,15 @@ confirmButton.addEventListener("click", async () => {
                 .then((response) => numeroPedido = response)
                 .then((response) => console.log(response))
 
+                console.log(numeroPedido)
+
                 let message = ''
 
                 message += 'Pedido No: ' + numeroPedido.split(' ')[3] + '\n'
                 message += 'Data/Hora: ' + new Date().getFullYear() + '/' + (new Date().getMonth() + 1) + '/' + new Date().getDate() + ' ' + new Date().getHours() + ':' + new Date().getMinutes() + '\n'
                 message += `*Valor: R$ ${info[0].vl_pedido.toFixed(2).replace('.', ',')}*\n\n`
-                message += form[0].name + ': ' + form[0].value + '\n'
-                message += form[1].name + ': ' + form[1].value + '\n'
+                message += 'Nome' + ': ' + form[0].value + '\n'
+                message += 'Celular' + ': ' + form[1].value + '\n'
                 message += '_____\n'
                 message += 'RETIRA'
                 message += '_____\n\n'
@@ -194,13 +242,13 @@ confirmButton.addEventListener("click", async () => {
                 for (let i = 0; i < pedido.length; i++) {
                     message += pedido[i].id_produto + ') ' + '*' + pedido[i].nome_produto + '*' + ` [Cód: ${pedido[i].codigo_pesquisa}]` + '\n'
                     message += pedido[i].unidade + ' ' + pedido[i].qtde + ' X R$ ' + pedido[i].vl_unitario.toFixed(2).replace('.', ',') + '\n'
-                    message += 'Obs: ' + pedido[i].obs + '\n'
                     message += 'Complementos:\n'
                     for (let j = 0; j < pedido[i].complementos.length; j++) {
-                        message += '- ' + pedido[i].complementos[j].nome_complemento + ' R$ ' + pedido[i].complementos[j].vl_complemento.toFixed(2).replace('.', ',') + ' x ' + pedido[i].complementos[j].qtde_complemento + '\n'
+                        message += '+ ' + pedido[i].complementos[j].nome_complemento + ' R$ ' + pedido[i].complementos[j].vl_complemento.toFixed(2).replace('.', ',') + ' x ' + pedido[i].complementos[j].qtde_complemento + '\n'
                     }
-                    message += 'Subtotal: R$ ' + pedido[i].vl_total.toFixed(2).replace('.', ',')
-                    message += '\n\n'
+                    message += '= Subtotal: R$ ' + pedido[i].vl_total.toFixed(2).replace('.', ',')+ '\n'
+                    message += 'Obs: ' + pedido[i].obs + '\n'
+                    message += '\n'
                 }
     
                 message += '\n'

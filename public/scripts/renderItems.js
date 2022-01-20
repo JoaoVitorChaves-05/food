@@ -170,10 +170,25 @@ const setForm = (type) => {
         </select>`
         form.innerHTML = formType
     } else {
+        
+        let formasPagamento = document.querySelectorAll('.payment-item')
+        let options = (() => {
+            let options = "<option value='null'>Selecione uma forma de pagamento</option>"
+            for (var i = 0; i < formasPagamento.length; i++) {
+                options += `<option value="${formasPagamento[i].innerHTML}">${formasPagamento[i].innerHTML}</option>`
+            }
+            return options
+        })()
+
         let formType = 
         `
         <input placeholder="Insira seu nome" type="text" name="name" id="name">
         <input placeholder="Insira seu telefone (com DDD)" type="tel" name="Celular" id="Celular">
+        <select name="Pagamento" id="payment">
+            <optgroup>
+                ${options}
+            </optgroup>
+        </select>
         `
         form.innerHTML = formType
     }

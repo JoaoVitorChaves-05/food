@@ -8,7 +8,7 @@
     <div class="pedido">
         <div class="info-main"> 
             <h1 id="nome_produto">{{produtoSelecionado.nome_produto}}</h1>
-            <img src="/images/hamburguer-de-queijo.png" alt="Foto do pedido" width="150px" height="150px">
+            <img src={{produtoSelecionado.imagem}} alt="Foto do pedido" width="250px" height="150px">
             <div class="info-food">
                 <p>{{produtoSelecionado.descricao}}</p>
                 {{#if temPromocao}}
@@ -35,10 +35,17 @@
                         <div class="title-group">
                             <h2>{{this.grupo_complemento}}</h2>
                             <span style="display: none;" class="minimoComplemento">{{this.MinimoComplemento}}</span>
+                            <span style="display: none;" class="maximoComplemento">{{this.MaximoComplemento}}</span>
                             {{#if this.MinimoComplemento}}
                                 <h3 class="maxOptions required">Obrigatório (Máximo de opções: {{this.MaximoComplemento}})</h3>
+                                <h3 class="">Mínimo de opções: {{this.MinimoComplemento}}</h3>
                                 {{else}}
-                                <h3 class="maxOptions">Opcional (Máximo de opções: {{this.MaximoComplemento}})</h3>
+                                {{#if this.ilimitado}}
+                                    <span style="display: none;" class="ilimitado">{{this.ilimitado}}</span>
+                                    <h3 class="maxOptions">Opcional (Máximo de opções: Ilimitado)</h3>
+                                    {{else}}
+                                    <h3 class="maxOptions">Opcional (Máximo de opções: {{this.MaximoComplemento}})</h3>
+                                {{/if}}
                             {{/if}}
                         </div>
                         <div class="options">

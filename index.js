@@ -147,6 +147,13 @@ app.get('/:restaurante/pedido', async (req, res) => {
         console.log(produtoSelecionado)
         console.log(produtoSelecionado.grupoComplemento)
 
+        produtoSelecionado.grupoComplemento.forEach(grupo => {
+            if (grupo.MinimoComplemento == 0 && grupo.MaximoComplemento == 0)
+                grupo.ilimitado = true
+            else
+                grupo.ilimitado = false
+        })
+
         res.render('food', {
             gruposComplementos: produtoSelecionado.grupoComplemento,
             produtoSelecionado: produtoSelecionado,
@@ -201,7 +208,6 @@ app.get('/api/send', async (req, res) => {
     .then(res => res.text())
     .then(response => res.send(response))
     .catch(er => console.log(er))
-
 })
 
 app.listen(PORT)

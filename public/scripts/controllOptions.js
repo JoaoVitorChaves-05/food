@@ -66,11 +66,13 @@ function updateCheckboxesState() {
 function verificar(clicked) {
 
     let groupID = clicked.parentNode.parentNode.parentNode.parentNode.id
-    let maxOptions = clicked.parentNode.parentNode.parentNode.parentNode.children[0].children[2].innerHTML.split(' ')[4][0]
+    let maxOptions = document.querySelector(`#${groupID} .maximoComplemento`).innerHTML
     let checkboxArea = clicked.parentNode
     let options = clicked.parentNode.parentNode.parentNode.children
 
     let AllCheckboxes = document.querySelectorAll(`input`)
+
+    const ilimitado = document.querySelector(`#${groupID} .ilimitado`)
 
     if (clicked.checked === false) {
 
@@ -105,7 +107,7 @@ function verificar(clicked) {
             }
         })
 
-        if (maxOptions > 1) {
+        if (maxOptions > 1 || ilimitado) {
             checkboxArea.innerHTML += `<input type="checkbox" id="${checkboxesState.length}" value="${clicked.value}" name="option 1" onchange="verificar(this)">`
             checkboxesState.push({
                 id: checkboxesState.length, 
@@ -146,19 +148,21 @@ function verificar(clicked) {
 
     let checkboxes = document.querySelectorAll(`#${groupID} input`)
 
-    for (let i = 0; i < checkboxes.length; i++) {
-        if (checkboxes[i].checked) {
-            checkeds++
-        }
-
-        if (checkeds < maxOptions) {
-            for (let j = 0; j < checkboxes.length; j++) {
-                checkboxes[j].disabled = false
+    if (!ilimitado) {
+        for (let i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+                checkeds++
             }
-        } else {
-            for (let k = 0; k < checkboxes.length; k++) {
-                if (checkboxes[k].checked == false)
-                    checkboxes[k].disabled = true
+    
+            if (checkeds < maxOptions) {
+                for (let j = 0; j < checkboxes.length; j++) {
+                    checkboxes[j].disabled = false
+                }
+            } else {
+                for (let k = 0; k < checkboxes.length; k++) {
+                    if (checkboxes[k].checked == false)
+                        checkboxes[k].disabled = true
+                }
             }
         }
     }

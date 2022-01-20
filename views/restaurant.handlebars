@@ -62,7 +62,11 @@
                     {{#each this.produtos_em_promocao}}
                         <div class="menu-item">
                             <div class="img-item">
-                                <img width="100px" height="100px" src="/images/hamburguer-de-queijo.png" alt="Logo do restaurante">
+                                {{#if this.imagem}}
+                                <img width="100px" height="100px" src={{this.imagem}} alt="Logo do restaurante" loading="lazy">
+                                {{else}}
+                                <img width="100px" height="100px" src="images/hamburguer-de-queijo.png" alt="Logo do restaurante" loading="lazy">
+                                {{/if}}
                             </div>
                             <div class="info-item">
                                 <h2>{{this.nome_produto}}</h2>
@@ -80,7 +84,7 @@
                     {{#each this.produtos}}
                         <div class="menu-item">
                             <div class="img-item">
-                                <img width="100px" height="100px" src="/images/hamburguer-de-queijo.png" alt="Logo do restaurante">
+                                <img width="100px" height="100px" src={{this.imagem}} alt="Logo do restaurante" loading="lazy">
                             </div>
                             <div class="info-item">
                                 <h2>{{this.nome_produto}}</h2>
