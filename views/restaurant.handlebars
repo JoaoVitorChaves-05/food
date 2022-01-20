@@ -62,11 +62,8 @@
                     {{#each this.produtos_em_promocao}}
                         <div class="menu-item">
                             <div class="img-item">
-                                {{#if this.imagem}}
-                                <img width="100px" height="100px" src={{this.imagem}} alt="Logo do restaurante" loading="lazy">
-                                {{else}}
-                                <img width="100px" height="100px" src="images/hamburguer-de-queijo.png" alt="Logo do restaurante" loading="lazy">
-                                {{/if}}
+                                <span style="display: none;">{{this.imagem}}</span>
+                                <img width="100px" height="100px" alt="Logo do restaurante" loading="lazy">
                             </div>
                             <div class="info-item">
                                 <h2>{{this.nome_produto}}</h2>
@@ -84,7 +81,8 @@
                     {{#each this.produtos}}
                         <div class="menu-item">
                             <div class="img-item">
-                                <img width="100px" height="100px" src={{this.imagem}} alt="Logo do restaurante" loading="lazy">
+                                <span style="display: none;">{{this.imagem}}</span>
+                                <img width="100px" height="100px" alt="Logo do restaurante" loading="lazy">
                             </div>
                             <div class="info-item">
                                 <h2>{{this.nome_produto}}</h2>
@@ -162,5 +160,14 @@
         value = value.toFixed(2)
         value = value.replace('.', ',')
         price.innerHTML = 'R$ ' + value
+    })
+
+    const imgItems = document.querySelectorAll('.img-item')
+    imgItems.forEach(item => {
+        let src = item.children[0].innerHTML
+        if (src != '')
+            item.children[1].src = src
+        else
+            item.children[1].src = 'images/hamburguer-de-queijo.png'
     })
 </script>

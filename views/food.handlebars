@@ -8,7 +8,8 @@
     <div class="pedido">
         <div class="info-main"> 
             <h1 id="nome_produto">{{produtoSelecionado.nome_produto}}</h1>
-            <img src={{produtoSelecionado.imagem}} alt="Foto do pedido" width="250px" height="150px">
+            <span class="src" style="display: none;">{{produtoSelecionado.imagem}}</span>
+            <img alt="Foto do pedido" width="250px" height="150px">
             <div class="info-food">
                 <p>{{produtoSelecionado.descricao}}</p>
                 {{#if temPromocao}}
@@ -108,3 +109,10 @@
 </footer>
 <script src="/scripts/controllOptions.js"></script>
 <script src="/scripts/renderPrices.js"></script>
+<script>
+    const img = document.querySelector('.info-main img')
+    const src = document.querySelector('.src').innerHTML
+
+    if (src != '') img.src = src
+    else img.src = '../images/hamburguer-de-queijo.png'
+</script>
