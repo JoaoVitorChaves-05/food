@@ -201,7 +201,13 @@ backButton.addEventListener("click", () => window.history.back())
 
 function validaPedido() {
     let groups = document.querySelectorAll('.group-options')
-    let groupsRequireds = [...groups].filter(group => group.children[0].children[2].classList.contains('required'))
+    let groupsRequireds = [...groups].filter(group => {
+        if (document.querySelector(`#${group.id} .minimoComplemento`).innerHTML >= 1)
+            return true
+        return false
+    })
+
+    console.log(groupsRequireds)
     
     for (let i = 0; i < groupsRequireds.length; i++) {
         let options = document.querySelectorAll(`#${groupsRequireds[i].id} input`)
