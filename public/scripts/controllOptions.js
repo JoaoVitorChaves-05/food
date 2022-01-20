@@ -206,8 +206,6 @@ function validaPedido() {
             return true
         return false
     })
-
-    console.log(groupsRequireds)
     
     for (let i = 0; i < groupsRequireds.length; i++) {
         let options = document.querySelectorAll(`#${groupsRequireds[i].id} input`)
