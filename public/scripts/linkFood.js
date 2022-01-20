@@ -234,8 +234,8 @@ confirmButton.addEventListener("click", async () => {
                 message += `*Valor: R$ ${info[0].vl_pedido.toFixed(2).replace('.', ',')}*\n\n`
                 message += 'Nome' + ': ' + form[0].value + '\n'
                 message += 'Celular' + ': ' + form[1].value + '\n'
-                message += '_____\n'
-                message += 'RETIRA'
+                message += '_____\n\n'
+                message += 'RETIRA\n'
                 message += '_____\n\n'
                 message += 'PRODUTOS\n\n'
 
