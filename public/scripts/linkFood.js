@@ -84,7 +84,7 @@ confirmButton.addEventListener("click", async () => {
 
     const state = document.querySelector("#state")
 
-    if (sessionStorage.pedido && JSON.parse(sessionStorage.pedido).pedido[0] !== null) {
+    if (sessionStorage.pedido && JSON.parse(sessionStorage.pedido).pedido.length > 0) {
         if (state.innerHTML === "aberto") {
             let pedido = JSON.parse(sessionStorage.pedido).pedido
             window.alert("Ao confirmar seu pedido iremos abrir uma conversa via WhatsApp com a loja. É muito importante não fechar essa conversa")
