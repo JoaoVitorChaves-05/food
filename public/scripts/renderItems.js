@@ -214,21 +214,25 @@ if (deliveryButton && getFood) {
     setForm(requestType)
 }
 
-deliveryButton.addEventListener('click', () => {
-    requestType = 'delivery'
-    if (getFood.classList[1] === "active-button")
-        getFood.classList.remove("active-button")
-    deliveryButton.classList.add("active-button")
-    setForm(requestType)
-})
+if (deliveryButton) {
+    deliveryButton.addEventListener('click', () => {
+        requestType = 'delivery'
+        if (getFood.classList[1] === "active-button")
+            getFood.classList.remove("active-button")
+        deliveryButton.classList.add("active-button")
+        setForm(requestType)
+    })
+}
 
-getFood.addEventListener('click', () => {
-    requestType = 'retirar'
-    if (deliveryButton.classList[1] === "active-button")
-        deliveryButton.classList.remove("active-button")
-    getFood.classList.add("active-button")
-    setForm(requestType)
-})
+if (getFood) {
+    getFood.addEventListener('click', () => {
+        requestType = 'retirar'
+        if (deliveryButton.classList[1] === "active-button")
+            deliveryButton.classList.remove("active-button")
+        getFood.classList.add("active-button")
+        setForm(requestType)
+    })
+}
 
 const checkCEP = async () => {
     const cep = document.querySelector('#cep').value
