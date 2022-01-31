@@ -14,7 +14,7 @@ app.set("views", "./views");
 
 const PORT = process.env.PORT || 3000
 
-const API = 'https://2735-187-121-61-129.ngrok.io'
+const API = 'https://56cd-200-170-119-228.ngrok.io'
 
 app.get('/', async (req, res) => {
     const restaurantes = await fetch(`${API}/api/restaurantes/123`)
