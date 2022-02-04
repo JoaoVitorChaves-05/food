@@ -107,7 +107,22 @@ function verificar(clicked) {
             }
         })
 
-        if (maxOptions > 1 || ilimitado) {
+        if ((maxOptions > 1 && (() => {
+            let checkeds = 0
+            checkboxesState.forEach(e => {
+                if (e.state == true) checkeds++
+            })
+            
+            if (checkeds == maxOptions) return false
+
+            const checkboxesInArea = checkboxArea.children
+
+            for (let i = 0; i < checkboxesInArea.length; i++) {
+                if (!checkboxesInArea[i].checked) return false
+            }
+
+            return true
+        })()) || ilimitado) {
             checkboxArea.innerHTML += `<input type="checkbox" id="${checkboxesState.length}" value="${clicked.value}" name="option 1" onchange="verificar(this)">`
             checkboxesState.push({
                 id: checkboxesState.length, 

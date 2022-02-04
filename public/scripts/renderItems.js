@@ -248,6 +248,8 @@ const checkCEP = async () => {
         .then(response => response.json())
         .then(response => response)
 
+        if (info.erro) return
+
         console.log(info)
 
         const endereco = document.querySelector('#address')

@@ -101,7 +101,9 @@ confirmButton.addEventListener("click", async () => {
             }]
 
             let form = document.forms["userInfo"]
-
+            let telefone = document.querySelector('#tel').innerHTML.trim().split('')
+            telefone = telefone.filter(char => char >= '0' && char <= '9')
+            
             if ((() => {
                 if (document.querySelector('.active-button').lastElementChild.innerHTML === 'Delivery')
                     return 'E'
@@ -187,7 +189,7 @@ confirmButton.addEventListener("click", async () => {
                 message += '\n'
                 message += '*ATENÇÃO*\n'
                 message += 'Aguarde a confirmação do estabelecimento e o cálculo do frete'
-                window.location.href = "https://wa.me/5512997932718?text=" + encodeURIComponent(message)
+                window.location.href = `https://wa.me/55${telefone}?text=` + encodeURIComponent(message)
             } else {
                 info[0] = {
                     ...info[0],
@@ -255,7 +257,7 @@ confirmButton.addEventListener("click", async () => {
                 message += '*ATENÇÃO*\n'
                 message += 'Aguarde a confirmação do estabelecimento e o cálculo do frete'
             
-                window.location.href = "https://wa.me/5512997932718?text=" + encodeURIComponent(message)
+                window.location.href = `https://wa.me/55${telefone}?text=` + encodeURIComponent(message)
             }
         } else {
             window.alert("O Restaurante está fechado!")
