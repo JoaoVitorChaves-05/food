@@ -102,8 +102,9 @@ confirmButton.addEventListener("click", async () => {
 
             let form = document.forms["userInfo"]
             let telefone = document.querySelector('#tel').innerHTML.trim().split('')
-            telefone = telefone.filter(char => char >= '0' && char <= '9')
-            
+            telefone = telefone.filter(char => char >= '0' && char <= '9').toString()
+            telefone = telefone.replaceAll(',', '')
+            console.log(telefone)
             if ((() => {
                 if (document.querySelector('.active-button').lastElementChild.innerHTML === 'Delivery')
                     return 'E'

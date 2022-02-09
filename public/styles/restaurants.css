@@ -6,6 +6,10 @@
     margin-top: 2%;
 }
 
+#title-restaurants h1, #title-restaurants h2 {
+    text-align: center;
+}
+
 #title-restaurants h2 {
     color: rgb(209, 207, 207);
 }
@@ -18,9 +22,9 @@
 
 #icons-restaurants {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
 .item-restaurant {
@@ -36,6 +40,16 @@
     
     display: flex;
     flex-direction: column;
+
+    box-shadow: 1px 1px 1px 1px rgb(129, 129, 129);
+    background-color: #fff;
+    border-radius: 10px;
+
+    padding: 10px;
+}
+
+.item-restaurant p {
+    text-align: center;
 }
 
 .item-restaurant h2 {

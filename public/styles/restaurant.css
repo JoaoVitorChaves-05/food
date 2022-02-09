@@ -92,12 +92,11 @@ nav {
 }
 
 .menu-item{
-    background-color: #fff;
     display: flex;
     flex-direction: row;
 
     box-shadow: 1px 1px 1px 1px rgb(129, 129, 129);
-
+    background-color: #fff;
     border-radius: 10px;
 
     margin-bottom: 3%;
