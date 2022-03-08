@@ -12,7 +12,7 @@ app.engine('handlebars', engine())
 app.set('view engine', 'handlebars');
 app.set("views", "./views");
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 80
 
 const API = 'https://56cd-200-170-119-228.ngrok.io'
 
